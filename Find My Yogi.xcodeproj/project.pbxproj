@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		326EC0A81963356F00087EBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326EC0A71963356F00087EBD /* Foundation.framework */; };
+		326EC0AA1963356F00087EBD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326EC0A91963356F00087EBD /* CoreGraphics.framework */; };
+		326EC0AC1963356F00087EBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326EC0AB1963356F00087EBD /* UIKit.framework */; };
+		326EC0B21963356F00087EBD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0B01963356F00087EBD /* InfoPlist.strings */; };
+		326EC0B41963356F00087EBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0B31963356F00087EBD /* main.m */; };
+		326EC0B81963356F00087EBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0B71963356F00087EBD /* AppDelegate.m */; };
+		326EC0BB1963357000087EBD /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0B91963357000087EBD /* Main_iPhone.storyboard */; };
+		326EC0BE1963357000087EBD /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0BC1963357000087EBD /* Main_iPad.storyboard */; };
+		326EC0C11963357000087EBD /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0C01963357000087EBD /* MasterViewController.m */; };
+		326EC0C41963357000087EBD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0C31963357000087EBD /* DetailViewController.m */; };
+		326EC0C61963357000087EBD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0C51963357000087EBD /* Images.xcassets */; };
+		326EC0CD1963357000087EBD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326EC0CC1963357000087EBD /* XCTest.framework */; };
+		326EC0CE1963357000087EBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326EC0A71963356F00087EBD /* Foundation.framework */; };
+		326EC0CF1963357000087EBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326EC0AB1963356F00087EBD /* UIKit.framework */; };
+		326EC0D71963357000087EBD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0D51963357000087EBD /* InfoPlist.strings */; };
+		326EC0D91963357000087EBD /* Find_My_YogiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0D81963357000087EBD /* Find_My_YogiTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		326EC0D01963357000087EBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 326EC09C1963356F00087EBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 326EC0A31963356F00087EBD;
+			remoteInfo = "Find My Yogi";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		326EC0A41963356F00087EBD /* Find My Yogi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find My Yogi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		326EC0A71963356F00087EBD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		326EC0A91963356F00087EBD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		326EC0AB1963356F00087EBD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		326EC0AF1963356F00087EBD /* Find My Yogi-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Find My Yogi-Info.plist"; sourceTree = "<group>"; };
+		326EC0B11963356F00087EBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		326EC0B31963356F00087EBD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		326EC0B51963356F00087EBD /* Find My Yogi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Find My Yogi-Prefix.pch"; sourceTree = "<group>"; };
+		326EC0B61963356F00087EBD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		326EC0B71963356F00087EBD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		326EC0BA1963357000087EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		326EC0BD1963357000087EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		326EC0BF1963357000087EBD /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		326EC0C01963357000087EBD /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		326EC0C21963357000087EBD /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		326EC0C31963357000087EBD /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		326EC0C51963357000087EBD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		326EC0CB1963357000087EBD /* Find My YogiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Find My YogiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		326EC0CC1963357000087EBD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		326EC0D41963357000087EBD /* Find My YogiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Find My YogiTests-Info.plist"; sourceTree = "<group>"; };
+		326EC0D61963357000087EBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		326EC0D81963357000087EBD /* Find_My_YogiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Find_My_YogiTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		326EC0A11963356F00087EBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				326EC0AA1963356F00087EBD /* CoreGraphics.framework in Frameworks */,
+				326EC0AC1963356F00087EBD /* UIKit.framework in Frameworks */,
+				326EC0A81963356F00087EBD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		326EC0C81963357000087EBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				326EC0CD1963357000087EBD /* XCTest.framework in Frameworks */,
+				326EC0CF1963357000087EBD /* UIKit.framework in Frameworks */,
+				326EC0CE1963357000087EBD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		326EC09B1963356F00087EBD = {
+			isa = PBXGroup;
+			children = (
+				326EC0AD1963356F00087EBD /* Find My Yogi */,
+				326EC0D21963357000087EBD /* Find My YogiTests */,
+				326EC0A61963356F00087EBD /* Frameworks */,
+				326EC0A51963356F00087EBD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		326EC0A51963356F00087EBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				326EC0A41963356F00087EBD /* Find My Yogi.app */,
+				326EC0CB1963357000087EBD /* Find My YogiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		326EC0A61963356F00087EBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				326EC0A71963356F00087EBD /* Foundation.framework */,
+				326EC0A91963356F00087EBD /* CoreGraphics.framework */,
+				326EC0AB1963356F00087EBD /* UIKit.framework */,
+				326EC0CC1963357000087EBD /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		326EC0AD1963356F00087EBD /* Find My Yogi */ = {
+			isa = PBXGroup;
+			children = (
+				326EC0B61963356F00087EBD /* AppDelegate.h */,
+				326EC0B71963356F00087EBD /* AppDelegate.m */,
+				326EC0B91963357000087EBD /* Main_iPhone.storyboard */,
+				326EC0BC1963357000087EBD /* Main_iPad.storyboard */,
+				326EC0BF1963357000087EBD /* MasterViewController.h */,
+				326EC0C01963357000087EBD /* MasterViewController.m */,
+				326EC0C21963357000087EBD /* DetailViewController.h */,
+				326EC0C31963357000087EBD /* DetailViewController.m */,
+				326EC0C51963357000087EBD /* Images.xcassets */,
+				326EC0AE1963356F00087EBD /* Supporting Files */,
+			);
+			path = "Find My Yogi";
+			sourceTree = "<group>";
+		};
+		326EC0AE1963356F00087EBD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				326EC0AF1963356F00087EBD /* Find My Yogi-Info.plist */,
+				326EC0B01963356F00087EBD /* InfoPlist.strings */,
+				326EC0B31963356F00087EBD /* main.m */,
+				326EC0B51963356F00087EBD /* Find My Yogi-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		326EC0D21963357000087EBD /* Find My YogiTests */ = {
+			isa = PBXGroup;
+			children = (
+				326EC0D81963357000087EBD /* Find_My_YogiTests.m */,
+				326EC0D31963357000087EBD /* Supporting Files */,
+			);
+			path = "Find My YogiTests";
+			sourceTree = "<group>";
+		};
+		326EC0D31963357000087EBD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				326EC0D41963357000087EBD /* Find My YogiTests-Info.plist */,
+				326EC0D51963357000087EBD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		326EC0A31963356F00087EBD /* Find My Yogi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 326EC0DC1963357000087EBD /* Build configuration list for PBXNativeTarget "Find My Yogi" */;
+			buildPhases = (
+				326EC0A01963356F00087EBD /* Sources */,
+				326EC0A11963356F00087EBD /* Frameworks */,
+				326EC0A21963356F00087EBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Find My Yogi";
+			productName = "Find My Yogi";
+			productReference = 326EC0A41963356F00087EBD /* Find My Yogi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		326EC0CA1963357000087EBD /* Find My YogiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 326EC0DF1963357000087EBD /* Build configuration list for PBXNativeTarget "Find My YogiTests" */;
+			buildPhases = (
+				326EC0C71963357000087EBD /* Sources */,
+				326EC0C81963357000087EBD /* Frameworks */,
+				326EC0C91963357000087EBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				326EC0D11963357000087EBD /* PBXTargetDependency */,
+			);
+			name = "Find My YogiTests";
+			productName = "Find My YogiTests";
+			productReference = 326EC0CB1963357000087EBD /* Find My YogiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		326EC09C1963356F00087EBD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Joaquin Brown";
+				TargetAttributes = {
+					326EC0CA1963357000087EBD = {
+						TestTargetID = 326EC0A31963356F00087EBD;
+					};
+				};
+			};
+			buildConfigurationList = 326EC09F1963356F00087EBD /* Build configuration list for PBXProject "Find My Yogi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 326EC09B1963356F00087EBD;
+			productRefGroup = 326EC0A51963356F00087EBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				326EC0A31963356F00087EBD /* Find My Yogi */,
+				326EC0CA1963357000087EBD /* Find My YogiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		326EC0A21963356F00087EBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				326EC0BE1963357000087EBD /* Main_iPad.storyboard in Resources */,
+				326EC0C61963357000087EBD /* Images.xcassets in Resources */,
+				326EC0BB1963357000087EBD /* Main_iPhone.storyboard in Resources */,
+				326EC0B21963356F00087EBD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		326EC0C91963357000087EBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				326EC0D71963357000087EBD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		326EC0A01963356F00087EBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				326EC0B81963356F00087EBD /* AppDelegate.m in Sources */,
+				326EC0C11963357000087EBD /* MasterViewController.m in Sources */,
+				326EC0B41963356F00087EBD /* main.m in Sources */,
+				326EC0C41963357000087EBD /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		326EC0C71963357000087EBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				326EC0D91963357000087EBD /* Find_My_YogiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		326EC0D11963357000087EBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 326EC0A31963356F00087EBD /* Find My Yogi */;
+			targetProxy = 326EC0D01963357000087EBD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		326EC0B01963356F00087EBD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				326EC0B11963356F00087EBD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		326EC0B91963357000087EBD /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				326EC0BA1963357000087EBD /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		326EC0BC1963357000087EBD /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				326EC0BD1963357000087EBD /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		326EC0D51963357000087EBD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				326EC0D61963357000087EBD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		326EC0DA1963357000087EBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		326EC0DB1963357000087EBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		326EC0DD1963357000087EBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Find My Yogi/Find My Yogi-Prefix.pch";
+				INFOPLIST_FILE = "Find My Yogi/Find My Yogi-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		326EC0DE1963357000087EBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Find My Yogi/Find My Yogi-Prefix.pch";
+				INFOPLIST_FILE = "Find My Yogi/Find My Yogi-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		326EC0E01963357000087EBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Find My Yogi.app/Find My Yogi";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Find My Yogi/Find My Yogi-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Find My YogiTests/Find My YogiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		326EC0E11963357000087EBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Find My Yogi.app/Find My Yogi";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Find My Yogi/Find My Yogi-Prefix.pch";
+				INFOPLIST_FILE = "Find My YogiTests/Find My YogiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		326EC09F1963356F00087EBD /* Build configuration list for PBXProject "Find My Yogi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				326EC0DA1963357000087EBD /* Debug */,
+				326EC0DB1963357000087EBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		326EC0DC1963357000087EBD /* Build configuration list for PBXNativeTarget "Find My Yogi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				326EC0DD1963357000087EBD /* Debug */,
+				326EC0DE1963357000087EBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		326EC0DF1963357000087EBD /* Build configuration list for PBXNativeTarget "Find My YogiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				326EC0E01963357000087EBD /* Debug */,
+				326EC0E11963357000087EBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 326EC09C1963356F00087EBD /* Project object */;
+}
