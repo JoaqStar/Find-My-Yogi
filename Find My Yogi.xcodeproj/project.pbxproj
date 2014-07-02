@@ -23,6 +23,10 @@
 		326EC0CF1963357000087EBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326EC0AB1963356F00087EBD /* UIKit.framework */; };
 		326EC0D71963357000087EBD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0D51963357000087EBD /* InfoPlist.strings */; };
 		326EC0D91963357000087EBD /* Find_My_YogiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0D81963357000087EBD /* Find_My_YogiTests.m */; };
+		326EC0E319634E3000087EBD /* Jeff.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0E219634E3000087EBD /* Jeff.jpg */; };
+		326EC0E61963645300087EBD /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0E51963645300087EBD /* Tools.m */; };
+		326EC0E91963712F00087EBD /* YogiFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0E81963712F00087EBD /* YogiFeedCell.m */; };
+		326EC0EB196379F100087EBD /* thumbs_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0EA196379F100087EBD /* thumbs_up.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,12 @@
 		326EC0D41963357000087EBD /* Find My YogiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Find My YogiTests-Info.plist"; sourceTree = "<group>"; };
 		326EC0D61963357000087EBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		326EC0D81963357000087EBD /* Find_My_YogiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Find_My_YogiTests.m; sourceTree = "<group>"; };
+		326EC0E219634E3000087EBD /* Jeff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jeff.jpg; sourceTree = "<group>"; };
+		326EC0E41963645300087EBD /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		326EC0E51963645300087EBD /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
+		326EC0E71963712F00087EBD /* YogiFeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiFeedCell.h; sourceTree = "<group>"; };
+		326EC0E81963712F00087EBD /* YogiFeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiFeedCell.m; sourceTree = "<group>"; };
+		326EC0EA196379F100087EBD /* thumbs_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbs_up.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +127,8 @@
 		326EC0AD1963356F00087EBD /* Find My Yogi */ = {
 			isa = PBXGroup;
 			children = (
+				326EC0E41963645300087EBD /* Tools.h */,
+				326EC0E51963645300087EBD /* Tools.m */,
 				326EC0B61963356F00087EBD /* AppDelegate.h */,
 				326EC0B71963356F00087EBD /* AppDelegate.m */,
 				326EC0B91963357000087EBD /* Main_iPhone.storyboard */,
@@ -125,6 +137,8 @@
 				326EC0C01963357000087EBD /* MasterViewController.m */,
 				326EC0C21963357000087EBD /* DetailViewController.h */,
 				326EC0C31963357000087EBD /* DetailViewController.m */,
+				326EC0E71963712F00087EBD /* YogiFeedCell.h */,
+				326EC0E81963712F00087EBD /* YogiFeedCell.m */,
 				326EC0C51963357000087EBD /* Images.xcassets */,
 				326EC0AE1963356F00087EBD /* Supporting Files */,
 			);
@@ -138,6 +152,8 @@
 				326EC0B01963356F00087EBD /* InfoPlist.strings */,
 				326EC0B31963356F00087EBD /* main.m */,
 				326EC0B51963356F00087EBD /* Find My Yogi-Prefix.pch */,
+				326EC0E219634E3000087EBD /* Jeff.jpg */,
+				326EC0EA196379F100087EBD /* thumbs_up.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -236,10 +252,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				326EC0E319634E3000087EBD /* Jeff.jpg in Resources */,
 				326EC0BE1963357000087EBD /* Main_iPad.storyboard in Resources */,
 				326EC0C61963357000087EBD /* Images.xcassets in Resources */,
 				326EC0BB1963357000087EBD /* Main_iPhone.storyboard in Resources */,
 				326EC0B21963356F00087EBD /* InfoPlist.strings in Resources */,
+				326EC0EB196379F100087EBD /* thumbs_up.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +277,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				326EC0B81963356F00087EBD /* AppDelegate.m in Sources */,
+				326EC0E61963645300087EBD /* Tools.m in Sources */,
 				326EC0C11963357000087EBD /* MasterViewController.m in Sources */,
 				326EC0B41963356F00087EBD /* main.m in Sources */,
 				326EC0C41963357000087EBD /* DetailViewController.m in Sources */,
+				326EC0E91963712F00087EBD /* YogiFeedCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tools.h"
 
 @class DetailViewController;
 

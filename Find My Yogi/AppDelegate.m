@@ -18,6 +18,10 @@
         UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
         splitViewController.delegate = (id)navigationController.topViewController;
     }
+    
+    // Set color of Nav bar text
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [Tools titleTintColor]}];
+    
     return YES;
 }
 							
