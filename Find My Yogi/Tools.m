@@ -13,7 +13,13 @@
 // Return the jade tint color
 + (UIColor *)titleTintColor
 {
-    return [UIColor colorWithRed:0.0 green:168.0 blue:107.0 alpha:1.0];
+    return [UIColor colorWithRed:0.0 green:168.0/255 blue:107.0/255 alpha:1.0];
+}
+
+// Return the "like" color
++ (UIColor *)likeTintColor
+{
+    return [UIColor colorWithRed:0.0 green:168.0/255 blue:107.0/255 alpha:1.0];
 }
 
 @end

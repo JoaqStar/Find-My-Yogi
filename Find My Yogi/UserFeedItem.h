@@ -21,5 +21,6 @@
 @property (strong, nonatomic) NSString *message;
 @property NSUInteger eventID;
 @property (strong, nonatomic) NSString *eventDescription;
+@property (getter = isLiked) BOOL liked; /*! Should this be here or derived on-the-fly? */
 
 @end

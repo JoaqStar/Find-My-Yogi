@@ -28,6 +28,9 @@
 		326EC0E91963712F00087EBD /* UserFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0E81963712F00087EBD /* UserFeedCell.m */; };
 		326EC0EB196379F100087EBD /* thumbs_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0EA196379F100087EBD /* thumbs_up.png */; };
 		326EC0EE19661DD300087EBD /* UserFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0ED19661DD300087EBD /* UserFeedItem.m */; };
+		326EC0F3196759F200087EBD /* Lizzie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0F0196759F200087EBD /* Lizzie.jpg */; };
+		326EC0F4196759F200087EBD /* Joaquin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0F1196759F200087EBD /* Joaquin.jpg */; };
+		326EC0F5196759F200087EBD /* Jeff_FB.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0F2196759F200087EBD /* Jeff_FB.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		326EC0EA196379F100087EBD /* thumbs_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbs_up.png; sourceTree = "<group>"; };
 		326EC0EC19661DD300087EBD /* UserFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFeedItem.h; sourceTree = "<group>"; };
 		326EC0ED19661DD300087EBD /* UserFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFeedItem.m; sourceTree = "<group>"; };
+		326EC0F0196759F200087EBD /* Lizzie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lizzie.jpg; sourceTree = "<group>"; };
+		326EC0F1196759F200087EBD /* Joaquin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Joaquin.jpg; sourceTree = "<group>"; };
+		326EC0F2196759F200087EBD /* Jeff_FB.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jeff_FB.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,9 @@
 				326EC0B51963356F00087EBD /* Find My Yogi-Prefix.pch */,
 				326EC0E219634E3000087EBD /* Jeff.jpg */,
 				326EC0EA196379F100087EBD /* thumbs_up.png */,
+				326EC0F0196759F200087EBD /* Lizzie.jpg */,
+				326EC0F1196759F200087EBD /* Joaquin.jpg */,
+				326EC0F2196759F200087EBD /* Jeff_FB.jpg */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -266,8 +275,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				326EC0E319634E3000087EBD /* Jeff.jpg in Resources */,
+				326EC0F4196759F200087EBD /* Joaquin.jpg in Resources */,
 				326EC0BE1963357000087EBD /* Main_iPad.storyboard in Resources */,
 				326EC0C61963357000087EBD /* Images.xcassets in Resources */,
+				326EC0F5196759F200087EBD /* Jeff_FB.jpg in Resources */,
+				326EC0F3196759F200087EBD /* Lizzie.jpg in Resources */,
 				326EC0BB1963357000087EBD /* Main_iPhone.storyboard in Resources */,
 				326EC0B21963356F00087EBD /* InfoPlist.strings in Resources */,
 				326EC0EB196379F100087EBD /* thumbs_up.png in Resources */,

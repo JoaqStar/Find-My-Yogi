@@ -52,16 +52,16 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pK-2R-kp5">
+                                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pK-2R-kp5">
                                             <rect key="frame" x="295" y="5" width="20" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="mKj-b4-70F"/>
                                                 <constraint firstAttribute="width" constant="20" id="zFZ-gz-hEv"/>
                                             </constraints>
-                                            <state key="normal" title="Button" image="thumbs_up.png">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
+                                            <connections>
+                                                <action selector="likeButtonPressed:" destination="m0d-ak-lc9" eventType="touchUpInside" id="Ty1-34-rfJ"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Announcement..." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="295" translatesAutoresizingMaskIntoConstraints="NO" id="kLA-Or-M9m">
                                             <rect key="frame" x="5" y="60" width="295" height="20"/>
@@ -95,10 +95,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="eventInfoLabel" destination="AUH-s3-n7Y" id="1VJ-SJ-i4t"/>
-                                    <outlet property="image" destination="n1q-C6-FL2" id="mHM-rW-oaJ"/>
                                     <outlet property="messageLabel" destination="kLA-Or-M9m" id="5ne-tc-hfE"/>
-                                    <outlet property="name" destination="uvY-BW-A0d" id="S79-OV-yO4"/>
                                     <outlet property="omButton" destination="0pK-2R-kp5" id="QNC-Lq-3jW"/>
+                                    <outlet property="yogiImage" destination="n1q-C6-FL2" id="nYr-ec-XKS"/>
+                                    <outlet property="yogiNameLabel" destination="uvY-BW-A0d" id="J8Y-hn-2d9"/>
                                     <segue destination="Ah7-4n-0Wa" kind="push" identifier="showDetail" id="jUr-3t-vfg"/>
                                 </connections>
                             </tableViewCell>
@@ -152,9 +152,6 @@
             <point key="canvasLocation" x="902" y="64"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="thumbs_up.png" width="20" height="20"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

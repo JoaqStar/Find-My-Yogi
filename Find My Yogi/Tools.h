@@ -11,5 +11,6 @@
 @interface Tools : NSObject
 
 + (UIColor *)titleTintColor;
++ (UIColor *)likeTintColor;
 
 @end

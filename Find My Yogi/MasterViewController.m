@@ -12,9 +12,7 @@
 #import "UserFeedCell.h"
 #import "UserFeedItem.h"
 
-@interface MasterViewController () {
-    NSMutableArray *_objects;
-}
+@interface MasterViewController ()
 
 @property (strong, nonatomic) NSMutableArray *userFeedItems;  // Array of main feed items
 
@@ -65,6 +63,7 @@
     UserFeedItem *item = [[UserFeedItem alloc] init];
     item.postID = 1;
     item.userID = 1;
+    item.yogiPhoto = [UIImage imageNamed:@"Joaquin.jpg"];
     item.name = @"Joaquin Brown";
     item.message = @"Just mastered a new pose, I'll be teaching it in my advanced class on Thursday!";
     [self.userFeedItems addObject:item];
@@ -72,6 +71,7 @@
     item = [[UserFeedItem alloc] init];
     item.postID = 2;
     item.userID = 1;
+    item.yogiPhoto = [UIImage imageNamed:@"Joaquin.jpg"];
     item.name = @"Joaquin Brown";
     item.message = @"Feeling pumped about tomorrow's Pilates class!";
     [self.userFeedItems addObject:item];
@@ -79,6 +79,7 @@
     item = [[UserFeedItem alloc] init];
     item.postID = 3;
     item.userID = 1;
+    item.yogiPhoto = [UIImage imageNamed:@"Jeff_FB.jpg"];
     item.name = @"Jeff Berman";
     item.message = @"I'll be at YogaExpo at booth 119 all day, stop by and say hello!";
     [self.userFeedItems addObject:item];
@@ -97,10 +98,7 @@
 
 - (void)insertNewObject:(id)sender
 {
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
-    }
-    [_objects insertObject:[NSDate date] atIndex:0];
+    [self.userFeedItems insertObject:[NSDate date] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -114,19 +112,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //return _objects.count;
-    return 1;
+    return [self.userFeedItems count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UserFeedCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserFeedCell" forIndexPath:indexPath];
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
-    
-    cell.yogiNameLabel.text = @"Jeff Berman";
-    cell.messageLabel.text = @"Hi everyone, I'll be subbing for Mark at tomorrow's 8:30 class, it's going to be a blast.  Hope to see you there!  ";
+    UserFeedItem *item = self.userFeedItems[indexPath.row];
+    [cell loadCellFromUserFeedItem:item];
+
     return cell;
 }
 
@@ -139,7 +134,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
+        [self.userFeedItems removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
@@ -165,7 +160,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        NSDate *object = _objects[indexPath.row];
+        NSDate *object = self.userFeedItems[indexPath.row];
         self.detailViewController.detailItem = object;
     }
 }
@@ -174,7 +169,7 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
+        NSDate *object = self.userFeedItems[indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
 }
