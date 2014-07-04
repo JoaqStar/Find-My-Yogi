@@ -10,10 +10,13 @@
 
 #import "DetailViewController.h"
 #import "UserFeedCell.h"
+#import "UserFeedItem.h"
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
 }
+
+@property (strong, nonatomic) NSMutableArray *userFeedItems;  // Array of main feed items
 
 @end
 
