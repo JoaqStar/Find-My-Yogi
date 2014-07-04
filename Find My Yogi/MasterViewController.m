@@ -22,6 +22,15 @@
 
 @implementation MasterViewController
 
+-(NSMutableArray *)userFeedItems
+{
+    if (!_userFeedItems) {
+        _userFeedItems = [[NSMutableArray alloc] init];
+    }
+    
+    return _userFeedItems;
+}
+
 - (void)awakeFromNib
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
@@ -49,8 +58,30 @@
 //    self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
-    // Register UserFeedCell class for UITableView
+    // Register UserFeedCell class for UITableView -- Not needed when using storyboard?
 /*!    [self.tableView registerClass:[UserFeedCell class] forCellReuseIdentifier:@"UserFeedCell"]; */
+    
+    // Create test data
+    UserFeedItem *item = [[UserFeedItem alloc] init];
+    item.postID = 1;
+    item.userID = 1;
+    item.name = @"Joaquin Brown";
+    item.message = @"Just mastered a new pose, I'll be teaching it in my advanced class on Thursday!";
+    [self.userFeedItems addObject:item];
+    
+    item = [[UserFeedItem alloc] init];
+    item.postID = 2;
+    item.userID = 1;
+    item.name = @"Joaquin Brown";
+    item.message = @"Feeling pumped about tomorrow's Pilates class!";
+    [self.userFeedItems addObject:item];
+    
+    item = [[UserFeedItem alloc] init];
+    item.postID = 3;
+    item.userID = 1;
+    item.name = @"Jeff Berman";
+    item.message = @"I'll be at YogaExpo at booth 119 all day, stop by and say hello!";
+    [self.userFeedItems addObject:item];
 }
 
 - (void)search:(id)sender
