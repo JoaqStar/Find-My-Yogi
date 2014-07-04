@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Joaquin Brown. All rights reserved.
 //
 
-#import "YogiFeedCell.h"
+#import "UserFeedCell.h"
 
-@implementation YogiFeedCell
+@implementation UserFeedCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

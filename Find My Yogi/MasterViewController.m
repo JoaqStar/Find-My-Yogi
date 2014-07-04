@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 
 #import "DetailViewController.h"
+#import "UserFeedCell.h"
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
@@ -44,6 +45,9 @@
 //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
 //    self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    // Register UserFeedCell class for UITableView
+/*!    [self.tableView registerClass:[UserFeedCell class] forCellReuseIdentifier:@"UserFeedCell"]; */
 }
 
 - (void)search:(id)sender
@@ -82,10 +86,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UserFeedCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserFeedCell" forIndexPath:indexPath];
 
     NSDate *object = _objects[indexPath.row];
     cell.textLabel.text = [object description];
+    
+    cell.yogiNameLabel.text = @"Jeff Berman";
+    cell.messageLabel.text = @"Hi everyone, I'll be subbing for Mark at tomorrow's 8:30 class, it's going to be a blast.  Hope to see you there!  ";
     return cell;
 }
 

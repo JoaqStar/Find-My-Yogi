@@ -25,8 +25,9 @@
 		326EC0D91963357000087EBD /* Find_My_YogiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0D81963357000087EBD /* Find_My_YogiTests.m */; };
 		326EC0E319634E3000087EBD /* Jeff.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0E219634E3000087EBD /* Jeff.jpg */; };
 		326EC0E61963645300087EBD /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0E51963645300087EBD /* Tools.m */; };
-		326EC0E91963712F00087EBD /* YogiFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0E81963712F00087EBD /* YogiFeedCell.m */; };
+		326EC0E91963712F00087EBD /* UserFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0E81963712F00087EBD /* UserFeedCell.m */; };
 		326EC0EB196379F100087EBD /* thumbs_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0EA196379F100087EBD /* thumbs_up.png */; };
+		326EC0EE19661DD300087EBD /* UserFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0ED19661DD300087EBD /* UserFeedItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,9 +66,11 @@
 		326EC0E219634E3000087EBD /* Jeff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jeff.jpg; sourceTree = "<group>"; };
 		326EC0E41963645300087EBD /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
 		326EC0E51963645300087EBD /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
-		326EC0E71963712F00087EBD /* YogiFeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiFeedCell.h; sourceTree = "<group>"; };
-		326EC0E81963712F00087EBD /* YogiFeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiFeedCell.m; sourceTree = "<group>"; };
+		326EC0E71963712F00087EBD /* UserFeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFeedCell.h; sourceTree = "<group>"; };
+		326EC0E81963712F00087EBD /* UserFeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFeedCell.m; sourceTree = "<group>"; };
 		326EC0EA196379F100087EBD /* thumbs_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbs_up.png; sourceTree = "<group>"; };
+		326EC0EC19661DD300087EBD /* UserFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFeedItem.h; sourceTree = "<group>"; };
+		326EC0ED19661DD300087EBD /* UserFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFeedItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,9 +140,10 @@
 				326EC0C01963357000087EBD /* MasterViewController.m */,
 				326EC0C21963357000087EBD /* DetailViewController.h */,
 				326EC0C31963357000087EBD /* DetailViewController.m */,
-				326EC0E71963712F00087EBD /* YogiFeedCell.h */,
-				326EC0E81963712F00087EBD /* YogiFeedCell.m */,
+				326EC0E71963712F00087EBD /* UserFeedCell.h */,
+				326EC0E81963712F00087EBD /* UserFeedCell.m */,
 				326EC0C51963357000087EBD /* Images.xcassets */,
+				326EC0EF19661DE400087EBD /* Model */,
 				326EC0AE1963356F00087EBD /* Supporting Files */,
 			);
 			path = "Find My Yogi";
@@ -174,6 +178,15 @@
 				326EC0D51963357000087EBD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		326EC0EF19661DE400087EBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				326EC0EC19661DD300087EBD /* UserFeedItem.h */,
+				326EC0ED19661DD300087EBD /* UserFeedItem.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,7 +294,8 @@
 				326EC0C11963357000087EBD /* MasterViewController.m in Sources */,
 				326EC0B41963356F00087EBD /* main.m in Sources */,
 				326EC0C41963357000087EBD /* DetailViewController.m in Sources */,
-				326EC0E91963712F00087EBD /* YogiFeedCell.m in Sources */,
+				326EC0E91963712F00087EBD /* UserFeedCell.m in Sources */,
+				326EC0EE19661DD300087EBD /* UserFeedItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
