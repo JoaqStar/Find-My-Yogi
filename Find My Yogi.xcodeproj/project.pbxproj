@@ -31,6 +31,41 @@
 		326EC0F3196759F200087EBD /* Lizzie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0F0196759F200087EBD /* Lizzie.jpg */; };
 		326EC0F4196759F200087EBD /* Joaquin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0F1196759F200087EBD /* Joaquin.jpg */; };
 		326EC0F5196759F200087EBD /* Jeff_FB.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0F2196759F200087EBD /* Jeff_FB.jpg */; };
+		4355FBF7196B11130059F0C7 /* AWSPersistenceDynamoDBIncrementalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FBEC196B11130059F0C7 /* AWSPersistenceDynamoDBIncrementalStore.m */; };
+		4355FBF8196B11130059F0C7 /* AmazonWIFKeyChainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FBEE196B11130059F0C7 /* AmazonWIFKeyChainWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4355FBF9196B11130059F0C7 /* AmazonAnonymousKeyChainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FBF0196B11130059F0C7 /* AmazonAnonymousKeyChainWrapper.m */; };
+		4355FBFA196B11130059F0C7 /* AmazonClientManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FBF2196B11130059F0C7 /* AmazonClientManager.m */; };
+		4355FBFB196B11130059F0C7 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FBF4196B11130059F0C7 /* Constants.m */; };
+		4355FBFC196B11130059F0C7 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FBF6196B11130059F0C7 /* Utilities.m */; };
+		4355FC14196B11260059F0C7 /* AmazonTVMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FBFF196B11260059F0C7 /* AmazonTVMClient.m */; };
+		4355FC15196B11260059F0C7 /* Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC01196B11260059F0C7 /* Crypto.m */; };
+		4355FC16196B11260059F0C7 /* GetTokenRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC03196B11260059F0C7 /* GetTokenRequest.m */; };
+		4355FC17196B11260059F0C7 /* GetTokenResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC05196B11260059F0C7 /* GetTokenResponse.m */; };
+		4355FC18196B11260059F0C7 /* GetTokenResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC07196B11260059F0C7 /* GetTokenResponseHandler.m */; };
+		4355FC19196B11260059F0C7 /* JSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC09196B11260059F0C7 /* JSONUtilities.m */; };
+		4355FC1A196B11260059F0C7 /* RegisterDeviceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC0B196B11260059F0C7 /* RegisterDeviceRequest.m */; };
+		4355FC1B196B11260059F0C7 /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC0D196B11260059F0C7 /* Request.m */; };
+		4355FC1C196B11260059F0C7 /* RequestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC0F196B11260059F0C7 /* RequestDelegate.m */; };
+		4355FC1D196B11260059F0C7 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC11196B11260059F0C7 /* Response.m */; };
+		4355FC1E196B11260059F0C7 /* ResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC13196B11260059F0C7 /* ResponseHandler.m */; };
+		4355FC22196B195A0059F0C7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC20196B195A0059F0C7 /* Model.xcdatamodeld */; };
+		4355FC25196B2FE10059F0C7 /* YogiFollowers.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC24196B2FE10059F0C7 /* YogiFollowers.m */; };
+		4355FC28196B2FE10059F0C7 /* YogiLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC27196B2FE10059F0C7 /* YogiLocations.m */; };
+		4355FC2B196B2FE20059F0C7 /* YogiOms.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC2A196B2FE20059F0C7 /* YogiOms.m */; };
+		4355FC2E196B2FE20059F0C7 /* YogiUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC2D196B2FE20059F0C7 /* YogiUsers.m */; };
+		4355FC31196B2FE20059F0C7 /* YogiVenues.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC30196B2FE20059F0C7 /* YogiVenues.m */; };
+		4355FC34196B2FE20059F0C7 /* YogiEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC33196B2FE20059F0C7 /* YogiEvents.m */; };
+		4355FC37196B2FE20059F0C7 /* YogiPosts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC36196B2FE20059F0C7 /* YogiPosts.m */; };
+		4355FC3D196B30230059F0C7 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC38196B30230059F0C7 /* AWSDynamoDB.framework */; };
+		4355FC3E196B30230059F0C7 /* AWSPersistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC39196B30230059F0C7 /* AWSPersistence.framework */; };
+		4355FC3F196B30230059F0C7 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC3A196B30230059F0C7 /* AWSRuntime.framework */; };
+		4355FC40196B30230059F0C7 /* AWSSecurityTokenService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC3B196B30230059F0C7 /* AWSSecurityTokenService.framework */; };
+		4355FC41196B30230059F0C7 /* AWSSNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC3C196B30230059F0C7 /* AWSSNS.framework */; };
+		4355FC45196B31AE0059F0C7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC44196B31AE0059F0C7 /* FacebookSDK.framework */; };
+		4355FC47196B32350059F0C7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC46196B32350059F0C7 /* CoreData.framework */; };
+		4355FC4D196B36C20059F0C7 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC4C196B36C20059F0C7 /* libsqlite3.0.dylib */; };
+		4355FC4E196B37680059F0C7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC48196B32430059F0C7 /* Social.framework */; };
+		4355FC4F196B377F0059F0C7 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC4A196B32650059F0C7 /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +112,66 @@
 		326EC0F0196759F200087EBD /* Lizzie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lizzie.jpg; sourceTree = "<group>"; };
 		326EC0F1196759F200087EBD /* Joaquin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Joaquin.jpg; sourceTree = "<group>"; };
 		326EC0F2196759F200087EBD /* Jeff_FB.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jeff_FB.jpg; sourceTree = "<group>"; };
+		4355FBEB196B11130059F0C7 /* AWSPersistenceDynamoDBIncrementalStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSPersistenceDynamoDBIncrementalStore.h; sourceTree = "<group>"; };
+		4355FBEC196B11130059F0C7 /* AWSPersistenceDynamoDBIncrementalStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSPersistenceDynamoDBIncrementalStore.m; sourceTree = "<group>"; };
+		4355FBED196B11130059F0C7 /* AmazonWIFKeyChainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmazonWIFKeyChainWrapper.h; sourceTree = "<group>"; };
+		4355FBEE196B11130059F0C7 /* AmazonWIFKeyChainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmazonWIFKeyChainWrapper.m; sourceTree = "<group>"; };
+		4355FBEF196B11130059F0C7 /* AmazonAnonymousKeyChainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmazonAnonymousKeyChainWrapper.h; sourceTree = "<group>"; };
+		4355FBF0196B11130059F0C7 /* AmazonAnonymousKeyChainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmazonAnonymousKeyChainWrapper.m; sourceTree = "<group>"; };
+		4355FBF1196B11130059F0C7 /* AmazonClientManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmazonClientManager.h; sourceTree = "<group>"; };
+		4355FBF2196B11130059F0C7 /* AmazonClientManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmazonClientManager.m; sourceTree = "<group>"; };
+		4355FBF3196B11130059F0C7 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		4355FBF4196B11130059F0C7 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		4355FBF5196B11130059F0C7 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		4355FBF6196B11130059F0C7 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		4355FBFE196B11260059F0C7 /* AmazonTVMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmazonTVMClient.h; sourceTree = "<group>"; };
+		4355FBFF196B11260059F0C7 /* AmazonTVMClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmazonTVMClient.m; sourceTree = "<group>"; };
+		4355FC00196B11260059F0C7 /* Crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crypto.h; sourceTree = "<group>"; };
+		4355FC01196B11260059F0C7 /* Crypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Crypto.m; sourceTree = "<group>"; };
+		4355FC02196B11260059F0C7 /* GetTokenRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTokenRequest.h; sourceTree = "<group>"; };
+		4355FC03196B11260059F0C7 /* GetTokenRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTokenRequest.m; sourceTree = "<group>"; };
+		4355FC04196B11260059F0C7 /* GetTokenResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTokenResponse.h; sourceTree = "<group>"; };
+		4355FC05196B11260059F0C7 /* GetTokenResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTokenResponse.m; sourceTree = "<group>"; };
+		4355FC06196B11260059F0C7 /* GetTokenResponseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTokenResponseHandler.h; sourceTree = "<group>"; };
+		4355FC07196B11260059F0C7 /* GetTokenResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTokenResponseHandler.m; sourceTree = "<group>"; };
+		4355FC08196B11260059F0C7 /* JSONUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONUtilities.h; sourceTree = "<group>"; };
+		4355FC09196B11260059F0C7 /* JSONUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONUtilities.m; sourceTree = "<group>"; };
+		4355FC0A196B11260059F0C7 /* RegisterDeviceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterDeviceRequest.h; sourceTree = "<group>"; };
+		4355FC0B196B11260059F0C7 /* RegisterDeviceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterDeviceRequest.m; sourceTree = "<group>"; };
+		4355FC0C196B11260059F0C7 /* Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = "<group>"; };
+		4355FC0D196B11260059F0C7 /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
+		4355FC0E196B11260059F0C7 /* RequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestDelegate.h; sourceTree = "<group>"; };
+		4355FC0F196B11260059F0C7 /* RequestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestDelegate.m; sourceTree = "<group>"; };
+		4355FC10196B11260059F0C7 /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Response.h; sourceTree = "<group>"; };
+		4355FC11196B11260059F0C7 /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Response.m; sourceTree = "<group>"; };
+		4355FC12196B11260059F0C7 /* ResponseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseHandler.h; sourceTree = "<group>"; };
+		4355FC13196B11260059F0C7 /* ResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseHandler.m; sourceTree = "<group>"; };
+		4355FC21196B195A0059F0C7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		4355FC23196B2FE10059F0C7 /* YogiFollowers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiFollowers.h; sourceTree = "<group>"; };
+		4355FC24196B2FE10059F0C7 /* YogiFollowers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiFollowers.m; sourceTree = "<group>"; };
+		4355FC26196B2FE10059F0C7 /* YogiLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiLocations.h; sourceTree = "<group>"; };
+		4355FC27196B2FE10059F0C7 /* YogiLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiLocations.m; sourceTree = "<group>"; };
+		4355FC29196B2FE20059F0C7 /* YogiOms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiOms.h; sourceTree = "<group>"; };
+		4355FC2A196B2FE20059F0C7 /* YogiOms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiOms.m; sourceTree = "<group>"; };
+		4355FC2C196B2FE20059F0C7 /* YogiUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiUsers.h; sourceTree = "<group>"; };
+		4355FC2D196B2FE20059F0C7 /* YogiUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiUsers.m; sourceTree = "<group>"; };
+		4355FC2F196B2FE20059F0C7 /* YogiVenues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiVenues.h; sourceTree = "<group>"; };
+		4355FC30196B2FE20059F0C7 /* YogiVenues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiVenues.m; sourceTree = "<group>"; };
+		4355FC32196B2FE20059F0C7 /* YogiEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiEvents.h; sourceTree = "<group>"; };
+		4355FC33196B2FE20059F0C7 /* YogiEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiEvents.m; sourceTree = "<group>"; };
+		4355FC35196B2FE20059F0C7 /* YogiPosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiPosts.h; sourceTree = "<group>"; };
+		4355FC36196B2FE20059F0C7 /* YogiPosts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiPosts.m; sourceTree = "<group>"; };
+		4355FC38196B30230059F0C7 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSDynamoDB.framework; path = "../../aws-ios-sdk-1.7.1/AWSDynamoDB.framework"; sourceTree = "<group>"; };
+		4355FC39196B30230059F0C7 /* AWSPersistence.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSPersistence.framework; path = "../../aws-ios-sdk-1.7.1/AWSPersistence.framework"; sourceTree = "<group>"; };
+		4355FC3A196B30230059F0C7 /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSRuntime.framework; path = "../../aws-ios-sdk-1.7.1/AWSRuntime.framework"; sourceTree = "<group>"; };
+		4355FC3B196B30230059F0C7 /* AWSSecurityTokenService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSSecurityTokenService.framework; path = "../../aws-ios-sdk-1.7.1/AWSSecurityTokenService.framework"; sourceTree = "<group>"; };
+		4355FC3C196B30230059F0C7 /* AWSSNS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSSNS.framework; path = "../../aws-ios-sdk-1.7.1/AWSSNS.framework"; sourceTree = "<group>"; };
+		4355FC42196B30490059F0C7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../../aws-ios-sdk-1.7.1/ThirdParty/FacebookSDK.framework"; sourceTree = "<group>"; };
+		4355FC44196B31AE0059F0C7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		4355FC46196B32350059F0C7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4355FC48196B32430059F0C7 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		4355FC4A196B32650059F0C7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		4355FC4C196B36C20059F0C7 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +179,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4355FC4F196B377F0059F0C7 /* AdSupport.framework in Frameworks */,
+				4355FC4E196B37680059F0C7 /* Social.framework in Frameworks */,
+				4355FC4D196B36C20059F0C7 /* libsqlite3.0.dylib in Frameworks */,
+				4355FC47196B32350059F0C7 /* CoreData.framework in Frameworks */,
+				4355FC45196B31AE0059F0C7 /* FacebookSDK.framework in Frameworks */,
+				4355FC3D196B30230059F0C7 /* AWSDynamoDB.framework in Frameworks */,
+				4355FC3E196B30230059F0C7 /* AWSPersistence.framework in Frameworks */,
+				4355FC3F196B30230059F0C7 /* AWSRuntime.framework in Frameworks */,
+				4355FC40196B30230059F0C7 /* AWSSecurityTokenService.framework in Frameworks */,
+				4355FC41196B30230059F0C7 /* AWSSNS.framework in Frameworks */,
 				326EC0AA1963356F00087EBD /* CoreGraphics.framework in Frameworks */,
 				326EC0AC1963356F00087EBD /* UIKit.framework in Frameworks */,
 				326EC0A81963356F00087EBD /* Foundation.framework in Frameworks */,
@@ -106,6 +211,8 @@
 		326EC09B1963356F00087EBD = {
 			isa = PBXGroup;
 			children = (
+				4355FC1F196B19200059F0C7 /* CoreData */,
+				4355FBEA196B10FA0059F0C7 /* AWS Store */,
 				326EC0AD1963356F00087EBD /* Find My Yogi */,
 				326EC0D21963357000087EBD /* Find My YogiTests */,
 				326EC0A61963356F00087EBD /* Frameworks */,
@@ -125,6 +232,17 @@
 		326EC0A61963356F00087EBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4355FC4C196B36C20059F0C7 /* libsqlite3.0.dylib */,
+				4355FC4A196B32650059F0C7 /* AdSupport.framework */,
+				4355FC48196B32430059F0C7 /* Social.framework */,
+				4355FC46196B32350059F0C7 /* CoreData.framework */,
+				4355FC44196B31AE0059F0C7 /* FacebookSDK.framework */,
+				4355FC42196B30490059F0C7 /* FacebookSDK.framework */,
+				4355FC38196B30230059F0C7 /* AWSDynamoDB.framework */,
+				4355FC39196B30230059F0C7 /* AWSPersistence.framework */,
+				4355FC3A196B30230059F0C7 /* AWSRuntime.framework */,
+				4355FC3B196B30230059F0C7 /* AWSSecurityTokenService.framework */,
+				4355FC3C196B30230059F0C7 /* AWSSNS.framework */,
 				326EC0A71963356F00087EBD /* Foundation.framework */,
 				326EC0A91963356F00087EBD /* CoreGraphics.framework */,
 				326EC0AB1963356F00087EBD /* UIKit.framework */,
@@ -196,6 +314,77 @@
 				326EC0ED19661DD300087EBD /* UserFeedItem.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		4355FBEA196B10FA0059F0C7 /* AWS Store */ = {
+			isa = PBXGroup;
+			children = (
+				4355FBFD196B11180059F0C7 /* TVM */,
+				4355FBEB196B11130059F0C7 /* AWSPersistenceDynamoDBIncrementalStore.h */,
+				4355FBEC196B11130059F0C7 /* AWSPersistenceDynamoDBIncrementalStore.m */,
+				4355FBED196B11130059F0C7 /* AmazonWIFKeyChainWrapper.h */,
+				4355FBEE196B11130059F0C7 /* AmazonWIFKeyChainWrapper.m */,
+				4355FBEF196B11130059F0C7 /* AmazonAnonymousKeyChainWrapper.h */,
+				4355FBF0196B11130059F0C7 /* AmazonAnonymousKeyChainWrapper.m */,
+				4355FBF1196B11130059F0C7 /* AmazonClientManager.h */,
+				4355FBF2196B11130059F0C7 /* AmazonClientManager.m */,
+				4355FBF3196B11130059F0C7 /* Constants.h */,
+				4355FBF4196B11130059F0C7 /* Constants.m */,
+				4355FBF5196B11130059F0C7 /* Utilities.h */,
+				4355FBF6196B11130059F0C7 /* Utilities.m */,
+			);
+			name = "AWS Store";
+			sourceTree = "<group>";
+		};
+		4355FBFD196B11180059F0C7 /* TVM */ = {
+			isa = PBXGroup;
+			children = (
+				4355FBFE196B11260059F0C7 /* AmazonTVMClient.h */,
+				4355FBFF196B11260059F0C7 /* AmazonTVMClient.m */,
+				4355FC00196B11260059F0C7 /* Crypto.h */,
+				4355FC01196B11260059F0C7 /* Crypto.m */,
+				4355FC02196B11260059F0C7 /* GetTokenRequest.h */,
+				4355FC03196B11260059F0C7 /* GetTokenRequest.m */,
+				4355FC04196B11260059F0C7 /* GetTokenResponse.h */,
+				4355FC05196B11260059F0C7 /* GetTokenResponse.m */,
+				4355FC06196B11260059F0C7 /* GetTokenResponseHandler.h */,
+				4355FC07196B11260059F0C7 /* GetTokenResponseHandler.m */,
+				4355FC08196B11260059F0C7 /* JSONUtilities.h */,
+				4355FC09196B11260059F0C7 /* JSONUtilities.m */,
+				4355FC0A196B11260059F0C7 /* RegisterDeviceRequest.h */,
+				4355FC0B196B11260059F0C7 /* RegisterDeviceRequest.m */,
+				4355FC0C196B11260059F0C7 /* Request.h */,
+				4355FC0D196B11260059F0C7 /* Request.m */,
+				4355FC0E196B11260059F0C7 /* RequestDelegate.h */,
+				4355FC0F196B11260059F0C7 /* RequestDelegate.m */,
+				4355FC10196B11260059F0C7 /* Response.h */,
+				4355FC11196B11260059F0C7 /* Response.m */,
+				4355FC12196B11260059F0C7 /* ResponseHandler.h */,
+				4355FC13196B11260059F0C7 /* ResponseHandler.m */,
+			);
+			name = TVM;
+			sourceTree = "<group>";
+		};
+		4355FC1F196B19200059F0C7 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4355FC20196B195A0059F0C7 /* Model.xcdatamodeld */,
+				4355FC35196B2FE20059F0C7 /* YogiPosts.h */,
+				4355FC36196B2FE20059F0C7 /* YogiPosts.m */,
+				4355FC32196B2FE20059F0C7 /* YogiEvents.h */,
+				4355FC33196B2FE20059F0C7 /* YogiEvents.m */,
+				4355FC2F196B2FE20059F0C7 /* YogiVenues.h */,
+				4355FC30196B2FE20059F0C7 /* YogiVenues.m */,
+				4355FC2C196B2FE20059F0C7 /* YogiUsers.h */,
+				4355FC2D196B2FE20059F0C7 /* YogiUsers.m */,
+				4355FC29196B2FE20059F0C7 /* YogiOms.h */,
+				4355FC2A196B2FE20059F0C7 /* YogiOms.m */,
+				4355FC26196B2FE10059F0C7 /* YogiLocations.h */,
+				4355FC27196B2FE10059F0C7 /* YogiLocations.m */,
+				4355FC23196B2FE10059F0C7 /* YogiFollowers.h */,
+				4355FC24196B2FE10059F0C7 /* YogiFollowers.m */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,13 +490,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4355FBF7196B11130059F0C7 /* AWSPersistenceDynamoDBIncrementalStore.m in Sources */,
+				4355FC1E196B11260059F0C7 /* ResponseHandler.m in Sources */,
+				4355FC34196B2FE20059F0C7 /* YogiEvents.m in Sources */,
 				326EC0B81963356F00087EBD /* AppDelegate.m in Sources */,
 				326EC0E61963645300087EBD /* Tools.m in Sources */,
+				4355FBFA196B11130059F0C7 /* AmazonClientManager.m in Sources */,
+				4355FC1D196B11260059F0C7 /* Response.m in Sources */,
 				326EC0C11963357000087EBD /* MasterViewController.m in Sources */,
+				4355FC19196B11260059F0C7 /* JSONUtilities.m in Sources */,
+				4355FBF9196B11130059F0C7 /* AmazonAnonymousKeyChainWrapper.m in Sources */,
+				4355FC18196B11260059F0C7 /* GetTokenResponseHandler.m in Sources */,
+				4355FC16196B11260059F0C7 /* GetTokenRequest.m in Sources */,
+				4355FC14196B11260059F0C7 /* AmazonTVMClient.m in Sources */,
+				4355FC1C196B11260059F0C7 /* RequestDelegate.m in Sources */,
+				4355FC31196B2FE20059F0C7 /* YogiVenues.m in Sources */,
 				326EC0B41963356F00087EBD /* main.m in Sources */,
 				326EC0C41963357000087EBD /* DetailViewController.m in Sources */,
+				4355FC2E196B2FE20059F0C7 /* YogiUsers.m in Sources */,
+				4355FC2B196B2FE20059F0C7 /* YogiOms.m in Sources */,
+				4355FC17196B11260059F0C7 /* GetTokenResponse.m in Sources */,
 				326EC0E91963712F00087EBD /* UserFeedCell.m in Sources */,
+				4355FC15196B11260059F0C7 /* Crypto.m in Sources */,
 				326EC0EE19661DD300087EBD /* UserFeedItem.m in Sources */,
+				4355FC37196B2FE20059F0C7 /* YogiPosts.m in Sources */,
+				4355FC1A196B11260059F0C7 /* RegisterDeviceRequest.m in Sources */,
+				4355FBF8196B11130059F0C7 /* AmazonWIFKeyChainWrapper.m in Sources */,
+				4355FC28196B2FE10059F0C7 /* YogiLocations.m in Sources */,
+				4355FC25196B2FE10059F0C7 /* YogiFollowers.m in Sources */,
+				4355FBFC196B11130059F0C7 /* Utilities.m in Sources */,
+				4355FC22196B195A0059F0C7 /* Model.xcdatamodeld in Sources */,
+				4355FBFB196B11130059F0C7 /* Constants.m in Sources */,
+				4355FC1B196B11260059F0C7 /* Request.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,9 +656,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/joaqman/Documents/aws-ios-sdk-1.7.1",
+					"/Users/joaqman/Documents/aws-ios-sdk-1.7.1/ThirdParty",
+					/Users/joaqman/Documents/FacebookSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Find My Yogi/Find My Yogi-Prefix.pch";
 				INFOPLIST_FILE = "Find My Yogi/Find My Yogi-Info.plist";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -455,9 +676,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/joaqman/Documents/aws-ios-sdk-1.7.1",
+					"/Users/joaqman/Documents/aws-ios-sdk-1.7.1/ThirdParty",
+					/Users/joaqman/Documents/FacebookSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Find My Yogi/Find My Yogi-Prefix.pch";
 				INFOPLIST_FILE = "Find My Yogi/Find My Yogi-Info.plist";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -522,6 +750,7 @@
 				326EC0DE1963357000087EBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		326EC0DF1963357000087EBD /* Build configuration list for PBXNativeTarget "Find My YogiTests" */ = {
 			isa = XCConfigurationList;
@@ -530,8 +759,22 @@
 				326EC0E11963357000087EBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4355FC20196B195A0059F0C7 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4355FC21196B195A0059F0C7 /* Model.xcdatamodel */,
+			);
+			currentVersion = 4355FC21196B195A0059F0C7 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 326EC09C1963356F00087EBD /* Project object */;
 }

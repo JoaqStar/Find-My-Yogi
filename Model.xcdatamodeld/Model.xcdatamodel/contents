@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="YogiEvents" representedClassName="YogiEvents" syncable="YES">
+        <attribute name="eventDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="eventId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="venueId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogiPosts" inverseName="event" inverseEntity="YogiPosts" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogiUsers" inverseName="events" inverseEntity="YogiUsers" syncable="YES"/>
+        <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogiVenues" inverseName="events" inverseEntity="YogiVenues" syncable="YES"/>
+    </entity>
+    <entity name="YogiFollowers" representedClassName="YogiFollowers" syncable="YES">
+        <attribute name="followerId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="YogiLocations" representedClassName="YogiLocations" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="locationKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="YogiOms" representedClassName="YogiOms" syncable="YES">
+        <attribute name="postId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="YogiPosts" representedClassName="YogiPosts" syncable="YES">
+        <attribute name="eventId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="postId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogiEvents" inverseName="post" inverseEntity="YogiEvents" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogiUsers" inverseName="posts" inverseEntity="YogiUsers" syncable="YES"/>
+    </entity>
+    <entity name="YogiUsers" representedClassName="YogiUsers" syncable="YES">
+        <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="deviceToken" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emailAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endpointARN" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isYogi" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lastLogin" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="loginType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="YogiEvents" inverseName="user" inverseEntity="YogiEvents" syncable="YES"/>
+        <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="YogiPosts" inverseName="user" inverseEntity="YogiPosts" syncable="YES"/>
+    </entity>
+    <entity name="YogiVenues" representedClassName="YogiVenues" syncable="YES">
+        <attribute name="address1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="address2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postalCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="provence" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="venueId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="YogiEvents" inverseName="venue" inverseEntity="YogiEvents" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="YogiUsers" positionX="-63" positionY="-18" width="128" height="238"/>
+        <element name="YogiLocations" positionX="-54" positionY="72" width="128" height="118"/>
+        <element name="YogiFollowers" positionX="-36" positionY="81" width="128" height="73"/>
+        <element name="YogiPosts" positionX="-18" positionY="90" width="128" height="148"/>
+        <element name="YogiEvents" positionX="0" positionY="99" width="128" height="178"/>
+        <element name="YogiVenues" positionX="18" positionY="126" width="128" height="193"/>
+        <element name="YogiOms" positionX="36" positionY="171" width="128" height="73"/>
+    </elements>
+</model>
