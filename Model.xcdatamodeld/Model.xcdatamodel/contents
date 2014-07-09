@@ -36,6 +36,7 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogiUsers" inverseName="posts" inverseEntity="YogiUsers" syncable="YES"/>
     </entity>
     <entity name="YogiUsers" representedClassName="YogiUsers" syncable="YES">
+        <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="deviceToken" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="emailAddress" optional="YES" attributeType="String" syncable="YES"/>
@@ -63,12 +64,12 @@
         <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="YogiEvents" inverseName="venue" inverseEntity="YogiEvents" syncable="YES"/>
     </entity>
     <elements>
-        <element name="YogiUsers" positionX="-63" positionY="-18" width="128" height="238"/>
-        <element name="YogiLocations" positionX="-54" positionY="72" width="128" height="118"/>
-        <element name="YogiFollowers" positionX="-36" positionY="81" width="128" height="73"/>
-        <element name="YogiPosts" positionX="-18" positionY="90" width="128" height="148"/>
         <element name="YogiEvents" positionX="0" positionY="99" width="128" height="178"/>
-        <element name="YogiVenues" positionX="18" positionY="126" width="128" height="193"/>
+        <element name="YogiFollowers" positionX="-36" positionY="81" width="128" height="73"/>
+        <element name="YogiLocations" positionX="-54" positionY="72" width="128" height="118"/>
         <element name="YogiOms" positionX="36" positionY="171" width="128" height="73"/>
+        <element name="YogiPosts" positionX="-18" positionY="90" width="128" height="148"/>
+        <element name="YogiUsers" positionX="-63" positionY="-18" width="128" height="255"/>
+        <element name="YogiVenues" positionX="18" positionY="126" width="128" height="193"/>
     </elements>
 </model>
