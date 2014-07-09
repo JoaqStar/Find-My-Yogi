@@ -34,16 +34,30 @@
 - (void)configureView
 {
     // Update the user interface for the detail item.
-
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+    [self.profilePhotoImage setImage:self.detailItem.yogiPhoto];
+    
+    // Set up instagram button
+    [self.instagramButton setImage:[UIImage imageNamed:@"Instagram Logo.png"] forState:UIControlStateNormal];
+    [self.instagramButton.imageView setContentMode:UIViewContentModeScaleAspectFit];
+  //  self.instagramButton.adjustsImageWhenHighlighted = NO;  // Don't darken button image when pressed
+    
+    // Choose correct Follow button
+    self.yogi = YES;  /*! For testing */
+    if (self.isYogi == YES) {
+        self.followersButton.hidden = NO;
+        self.followButton.hidden = YES;
+    } else {
+        self.followersButton.hidden = YES;
+        self.followButton.hidden = NO;
     }
+
+
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
     [self configureView];
 }
 

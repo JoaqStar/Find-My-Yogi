@@ -45,7 +45,7 @@
     if (self.omButton.imageView.image == nil) {
         UIImage *originalImage = [UIImage imageNamed:@"thumbs_up.png"];
         [self.omButton setImage:[originalImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        self.omButton.adjustsImageWhenHighlighted = NO;
+        self.omButton.adjustsImageWhenHighlighted = NO;  // Don't darken button image when pressed
     }
     
     if (feedItem.isLiked) {

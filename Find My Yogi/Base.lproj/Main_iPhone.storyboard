@@ -46,18 +46,18 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Yogi Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvY-BW-A0d">
-                                            <rect key="frame" x="63" y="17" width="224" height="20"/>
+                                            <rect key="frame" x="63" y="17" width="214" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pK-2R-kp5">
-                                            <rect key="frame" x="295" y="5" width="20" height="20"/>
+                                            <rect key="frame" x="285" y="5" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="mKj-b4-70F"/>
-                                                <constraint firstAttribute="width" constant="20" id="zFZ-gz-hEv"/>
+                                                <constraint firstAttribute="height" constant="30" id="mKj-b4-70F"/>
+                                                <constraint firstAttribute="width" constant="30" id="zFZ-gz-hEv"/>
                                             </constraints>
                                             <connections>
                                                 <action selector="likeButtonPressed:" destination="m0d-ak-lc9" eventType="touchUpInside" id="Ty1-34-rfJ"/>
@@ -109,7 +109,10 @@
                             <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Find My Yogi" id="tQt-TN-PWz"/>
+                    <navigationItem key="navigationItem" title="Find My Yogi" id="tQt-TN-PWz">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="pEC-8y-xkQ"/>
+                        <barButtonItem key="rightBarButtonItem" image="person icon-44b.png" id="Xuf-Tr-Eoa"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,24 +130,112 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lei-5M-9Gs">
-                                <rect key="frame" x="20" y="276" width="280" height="17"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wcp-NQ-nGj">
+                                <rect key="frame" x="0.0" y="64" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="5Fk-xf-gtj"/>
+                                    <constraint firstAttribute="height" constant="120" id="U5W-tr-tih"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Short bio and this is what I have to tell you, this is really pretty good!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="172" translatesAutoresizingMaskIntoConstraints="NO" id="MAD-nI-myU">
+                                <rect key="frame" x="128" y="72" width="172" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Ipc-aQ-ow3">
+                                <rect key="frame" x="147" y="143" width="59" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="imI-kK-ich"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <state key="normal" title="Follow Yogi">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="ehi-dA-dWW">
+                                <rect key="frame" x="147" y="141" width="59" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="r5u-hW-Gyd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <state key="normal" title="13 followers">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UOr-7i-eis">
+                                <rect key="frame" x="120" y="156" width="27" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="iK4-hz-2fr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uoQ-cZ-06n">
+                                <rect key="frame" x="206" y="163" width="27" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dCf-Ta-4WP">
+                                <rect key="frame" x="293" y="163" width="27" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifU-Xb-Iqh">
+                                <rect key="frame" x="233" y="140" width="60" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Poe-5D-81a"/>
+                                    <constraint firstAttribute="height" constant="44" id="s93-j7-q90"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Instagram Logo.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Lei-5M-9Gs" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" symbolic="YES" id="62x-JV-TTJ"/>
-                            <constraint firstItem="Lei-5M-9Gs" firstAttribute="centerY" secondItem="MMQ-IT-qOo" secondAttribute="centerY" id="JzS-HC-Rnl"/>
-                            <constraint firstAttribute="trailing" secondItem="Lei-5M-9Gs" secondAttribute="trailing" constant="20" symbolic="YES" id="pXB-RP-Zz6"/>
+                            <constraint firstItem="wcp-NQ-nGj" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" id="2TH-dz-wgg"/>
+                            <constraint firstItem="ifU-Xb-Iqh" firstAttribute="leading" secondItem="uoQ-cZ-06n" secondAttribute="trailing" id="3G2-t9-Kmy"/>
+                            <constraint firstItem="Ipc-aQ-ow3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MAD-nI-myU" secondAttribute="bottom" constant="8" symbolic="YES" id="4JZ-ZF-a3Q"/>
+                            <constraint firstItem="ehi-dA-dWW" firstAttribute="centerY" secondItem="UOr-7i-eis" secondAttribute="centerY" id="6cc-a8-YFM"/>
+                            <constraint firstItem="ifU-Xb-Iqh" firstAttribute="baseline" secondItem="Ipc-aQ-ow3" secondAttribute="baseline" constant="2" id="82N-Ct-zR6"/>
+                            <constraint firstItem="uoQ-cZ-06n" firstAttribute="leading" secondItem="ehi-dA-dWW" secondAttribute="trailing" id="E8Z-wX-Saz"/>
+                            <constraint firstItem="ehi-dA-dWW" firstAttribute="bottom" secondItem="wcp-NQ-nGj" secondAttribute="bottom" constant="1" id="Gpm-Fx-GlP"/>
+                            <constraint firstItem="Ipc-aQ-ow3" firstAttribute="leading" secondItem="UOr-7i-eis" secondAttribute="trailing" id="KOQ-BQ-gvA"/>
+                            <constraint firstItem="Ipc-aQ-ow3" firstAttribute="bottom" secondItem="wcp-NQ-nGj" secondAttribute="bottom" id="LmP-eR-UCA"/>
+                            <constraint firstAttribute="trailing" secondItem="MAD-nI-myU" secondAttribute="trailing" constant="20" symbolic="YES" id="MAI-Im-F0c"/>
+                            <constraint firstItem="dCf-Ta-4WP" firstAttribute="leading" secondItem="ifU-Xb-Iqh" secondAttribute="trailing" id="O0s-um-oGb"/>
+                            <constraint firstItem="ehi-dA-dWW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MAD-nI-myU" secondAttribute="bottom" constant="8" symbolic="YES" id="TY7-wY-Sa2"/>
+                            <constraint firstItem="uoQ-cZ-06n" firstAttribute="height" secondItem="dCf-Ta-4WP" secondAttribute="height" id="VQd-fZ-jj8"/>
+                            <constraint firstAttribute="trailing" secondItem="dCf-Ta-4WP" secondAttribute="trailing" id="Xs0-W1-9XX"/>
+                            <constraint firstItem="ifU-Xb-Iqh" firstAttribute="baseline" secondItem="ehi-dA-dWW" secondAttribute="baseline" constant="2" id="ZIc-sr-gr4"/>
+                            <constraint firstItem="uoQ-cZ-06n" firstAttribute="width" secondItem="dCf-Ta-4WP" secondAttribute="width" id="anD-8G-BaN"/>
+                            <constraint firstItem="uoQ-cZ-06n" firstAttribute="centerY" secondItem="dCf-Ta-4WP" secondAttribute="centerY" id="dHp-O1-J23"/>
+                            <constraint firstItem="UOr-7i-eis" firstAttribute="centerY" secondItem="Ipc-aQ-ow3" secondAttribute="centerY" id="ecz-lT-SyB"/>
+                            <constraint firstItem="wcp-NQ-nGj" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" id="f3q-pa-iiw"/>
+                            <constraint firstItem="MAD-nI-myU" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" constant="20" symbolic="YES" id="gpV-83-Mno"/>
+                            <constraint firstItem="uoQ-cZ-06n" firstAttribute="leading" secondItem="Ipc-aQ-ow3" secondAttribute="trailing" id="ipa-5l-1US"/>
+                            <constraint firstItem="UOr-7i-eis" firstAttribute="leading" secondItem="wcp-NQ-nGj" secondAttribute="trailing" id="itr-so-sCb"/>
+                            <constraint firstItem="ehi-dA-dWW" firstAttribute="leading" secondItem="UOr-7i-eis" secondAttribute="trailing" id="oE5-zN-Ijf"/>
+                            <constraint firstItem="uoQ-cZ-06n" firstAttribute="width" secondItem="UOr-7i-eis" secondAttribute="width" id="sSi-7A-e33"/>
+                            <constraint firstItem="MAD-nI-myU" firstAttribute="leading" secondItem="wcp-NQ-nGj" secondAttribute="trailing" constant="8" symbolic="YES" id="tIb-Ey-Co5"/>
+                            <constraint firstItem="uoQ-cZ-06n" firstAttribute="centerY" secondItem="UOr-7i-eis" secondAttribute="centerY" id="wPl-DS-ehE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Yogi Joaquin" id="cra-N8-TIN"/>
+                    <navigationItem key="navigationItem" title="Yogi Joaquin" id="cra-N8-TIN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="OqG-UO-fql"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="detailDescriptionLabel" destination="Lei-5M-9Gs" id="sCT-F7-F6f"/>
+                        <outlet property="followButton" destination="Ipc-aQ-ow3" id="fWg-tx-VaD"/>
+                        <outlet property="followersButton" destination="ehi-dA-dWW" id="Rpf-4S-7Jy"/>
+                        <outlet property="instagramButton" destination="ifU-Xb-Iqh" id="gN0-Zv-U04"/>
+                        <outlet property="profilePhotoImage" destination="wcp-NQ-nGj" id="FcC-0p-B8o"/>
+                        <outlet property="shortBioLabel" destination="MAD-nI-myU" id="2UW-bM-kaH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
@@ -152,6 +243,10 @@
             <point key="canvasLocation" x="902" y="64"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Instagram Logo.png" width="1239" height="352"/>
+        <image name="person icon-44b.png" width="44" height="44"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

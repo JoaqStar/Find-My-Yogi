@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3267FD05196B4D83003060FC /* person icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 3267FD04196B4D83003060FC /* person icon-512.png */; };
+		3267FD07196B4F50003060FC /* person icon-44.png in Resources */ = {isa = PBXBuildFile; fileRef = 3267FD06196B4F50003060FC /* person icon-44.png */; };
+		3267FD09196BADC2003060FC /* Instagram Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3267FD08196BADC2003060FC /* Instagram Logo.png */; };
+		3267FD0B196C87C6003060FC /* person icon-44b.png in Resources */ = {isa = PBXBuildFile; fileRef = 3267FD0A196C87C6003060FC /* person icon-44b.png */; };
 		326EC0A81963356F00087EBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326EC0A71963356F00087EBD /* Foundation.framework */; };
 		326EC0AA1963356F00087EBD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326EC0A91963356F00087EBD /* CoreGraphics.framework */; };
 		326EC0AC1963356F00087EBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326EC0AB1963356F00087EBD /* UIKit.framework */; };
@@ -78,6 +82,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3267FD04196B4D83003060FC /* person icon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "person icon-512.png"; sourceTree = "<group>"; };
+		3267FD06196B4F50003060FC /* person icon-44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "person icon-44.png"; sourceTree = "<group>"; };
+		3267FD08196BADC2003060FC /* Instagram Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Instagram Logo.png"; sourceTree = "<group>"; };
+		3267FD0A196C87C6003060FC /* person icon-44b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "person icon-44b.png"; sourceTree = "<group>"; };
 		326EC0A41963356F00087EBD /* Find My Yogi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find My Yogi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		326EC0A71963356F00087EBD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		326EC0A91963356F00087EBD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -279,6 +287,10 @@
 				326EC0F0196759F200087EBD /* Lizzie.jpg */,
 				326EC0F1196759F200087EBD /* Joaquin.jpg */,
 				326EC0F2196759F200087EBD /* Jeff_FB.jpg */,
+				3267FD06196B4F50003060FC /* person icon-44.png */,
+				3267FD0A196C87C6003060FC /* person icon-44b.png */,
+				3267FD04196B4D83003060FC /* person icon-512.png */,
+				3267FD08196BADC2003060FC /* Instagram Logo.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -457,13 +469,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3267FD0B196C87C6003060FC /* person icon-44b.png in Resources */,
 				326EC0E319634E3000087EBD /* Jeff.jpg in Resources */,
+				3267FD05196B4D83003060FC /* person icon-512.png in Resources */,
 				326EC0F4196759F200087EBD /* Joaquin.jpg in Resources */,
 				326EC0BE1963357000087EBD /* Main_iPad.storyboard in Resources */,
+				3267FD09196BADC2003060FC /* Instagram Logo.png in Resources */,
 				326EC0C61963357000087EBD /* Images.xcassets in Resources */,
 				326EC0F5196759F200087EBD /* Jeff_FB.jpg in Resources */,
 				326EC0F3196759F200087EBD /* Lizzie.jpg in Resources */,
 				326EC0BB1963357000087EBD /* Main_iPhone.storyboard in Resources */,
+				3267FD07196B4F50003060FC /* person icon-44.png in Resources */,
 				326EC0B21963356F00087EBD /* InfoPlist.strings in Resources */,
 				326EC0EB196379F100087EBD /* thumbs_up.png in Resources */,
 			);
