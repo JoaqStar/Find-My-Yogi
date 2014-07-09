@@ -42,7 +42,7 @@
   //  self.instagramButton.adjustsImageWhenHighlighted = NO;  // Don't darken button image when pressed
     
     // Choose correct Follow button
-    self.yogi = YES;
+    self.yogi = YES;  /*! For testing */
     if (self.isYogi == YES) {
         self.followersButton.hidden = NO;
         self.followButton.hidden = YES;
