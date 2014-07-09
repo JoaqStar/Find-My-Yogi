@@ -61,14 +61,14 @@
 		4355FC37196B2FE20059F0C7 /* YogiPosts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC36196B2FE20059F0C7 /* YogiPosts.m */; };
 		4355FC47196B32350059F0C7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC46196B32350059F0C7 /* CoreData.framework */; };
 		4355FC4D196B36C20059F0C7 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC4C196B36C20059F0C7 /* libsqlite3.0.dylib */; };
-		4355FC4E196B37680059F0C7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC48196B32430059F0C7 /* Social.framework */; };
+		43A0783E196D1CE200E56B57 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A0783D196D1CE200E56B57 /* FacebookSDK.framework */; };
+		43A07840196D1CF000E56B57 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A0783F196D1CF000E56B57 /* AdSupport.framework */; };
 		43ADD597196CF7CD00176A49 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ADD593196CF7CD00176A49 /* AWSDynamoDB.framework */; };
 		43ADD598196CF7CD00176A49 /* AWSPersistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ADD594196CF7CD00176A49 /* AWSPersistence.framework */; };
 		43ADD599196CF7CD00176A49 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ADD595196CF7CD00176A49 /* AWSRuntime.framework */; };
 		43ADD59A196CF7CD00176A49 /* AWSSecurityTokenService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ADD596196CF7CD00176A49 /* AWSSecurityTokenService.framework */; };
-		43ADD59C196CF7E000176A49 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ADD59B196CF7E000176A49 /* FacebookSDK.framework */; };
-		43ADD59E196CF7F200176A49 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ADD59D196CF7F200176A49 /* AdSupport.framework */; };
 		43ADD5A1196CF92C00176A49 /* YogiUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ADD5A0196CF92C00176A49 /* YogiUsers.m */; };
+		43ADD5A4196D072C00176A49 /* SigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ADD5A3196D072C00176A49 /* SigninViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,16 +167,17 @@
 		4355FC35196B2FE20059F0C7 /* YogiPosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiPosts.h; sourceTree = "<group>"; };
 		4355FC36196B2FE20059F0C7 /* YogiPosts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiPosts.m; sourceTree = "<group>"; };
 		4355FC46196B32350059F0C7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		4355FC48196B32430059F0C7 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		4355FC4C196B36C20059F0C7 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		43A0783D196D1CE200E56B57 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		43A0783F196D1CF000E56B57 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		43ADD593196CF7CD00176A49 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSDynamoDB.framework; sourceTree = "<group>"; };
 		43ADD594196CF7CD00176A49 /* AWSPersistence.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSPersistence.framework; sourceTree = "<group>"; };
 		43ADD595196CF7CD00176A49 /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSRuntime.framework; sourceTree = "<group>"; };
 		43ADD596196CF7CD00176A49 /* AWSSecurityTokenService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSSecurityTokenService.framework; sourceTree = "<group>"; };
-		43ADD59B196CF7E000176A49 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
-		43ADD59D196CF7F200176A49 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		43ADD59F196CF92C00176A49 /* YogiUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiUsers.h; sourceTree = "<group>"; };
 		43ADD5A0196CF92C00176A49 /* YogiUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiUsers.m; sourceTree = "<group>"; };
+		43ADD5A2196D072C00176A49 /* SigninViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigninViewController.h; sourceTree = "<group>"; };
+		43ADD5A3196D072C00176A49 /* SigninViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigninViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,16 +185,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43ADD59E196CF7F200176A49 /* AdSupport.framework in Frameworks */,
-				4355FC4E196B37680059F0C7 /* Social.framework in Frameworks */,
+				43A07840196D1CF000E56B57 /* AdSupport.framework in Frameworks */,
 				4355FC4D196B36C20059F0C7 /* libsqlite3.0.dylib in Frameworks */,
+				43A0783E196D1CE200E56B57 /* FacebookSDK.framework in Frameworks */,
 				4355FC47196B32350059F0C7 /* CoreData.framework in Frameworks */,
 				43ADD599196CF7CD00176A49 /* AWSRuntime.framework in Frameworks */,
 				43ADD59A196CF7CD00176A49 /* AWSSecurityTokenService.framework in Frameworks */,
 				326EC0AA1963356F00087EBD /* CoreGraphics.framework in Frameworks */,
 				43ADD598196CF7CD00176A49 /* AWSPersistence.framework in Frameworks */,
 				326EC0AC1963356F00087EBD /* UIKit.framework in Frameworks */,
-				43ADD59C196CF7E000176A49 /* FacebookSDK.framework in Frameworks */,
 				43ADD597196CF7CD00176A49 /* AWSDynamoDB.framework in Frameworks */,
 				326EC0A81963356F00087EBD /* Foundation.framework in Frameworks */,
 			);
@@ -215,9 +215,9 @@
 		326EC09B1963356F00087EBD = {
 			isa = PBXGroup;
 			children = (
+				326EC0AD1963356F00087EBD /* Find My Yogi */,
 				4355FC1F196B19200059F0C7 /* CoreData */,
 				4355FBEA196B10FA0059F0C7 /* AWS Store */,
-				326EC0AD1963356F00087EBD /* Find My Yogi */,
 				326EC0D21963357000087EBD /* Find My YogiTests */,
 				326EC0A61963356F00087EBD /* Frameworks */,
 				326EC0A51963356F00087EBD /* Products */,
@@ -236,14 +236,13 @@
 		326EC0A61963356F00087EBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				43ADD59D196CF7F200176A49 /* AdSupport.framework */,
-				43ADD59B196CF7E000176A49 /* FacebookSDK.framework */,
+				43A0783F196D1CF000E56B57 /* AdSupport.framework */,
+				43A0783D196D1CE200E56B57 /* FacebookSDK.framework */,
 				43ADD593196CF7CD00176A49 /* AWSDynamoDB.framework */,
 				43ADD594196CF7CD00176A49 /* AWSPersistence.framework */,
 				43ADD595196CF7CD00176A49 /* AWSRuntime.framework */,
 				43ADD596196CF7CD00176A49 /* AWSSecurityTokenService.framework */,
 				4355FC4C196B36C20059F0C7 /* libsqlite3.0.dylib */,
-				4355FC48196B32430059F0C7 /* Social.framework */,
 				4355FC46196B32350059F0C7 /* CoreData.framework */,
 				326EC0A71963356F00087EBD /* Foundation.framework */,
 				326EC0A91963356F00087EBD /* CoreGraphics.framework */,
@@ -262,6 +261,8 @@
 				326EC0B71963356F00087EBD /* AppDelegate.m */,
 				326EC0B91963357000087EBD /* Main_iPhone.storyboard */,
 				326EC0BC1963357000087EBD /* Main_iPad.storyboard */,
+				43ADD5A2196D072C00176A49 /* SigninViewController.h */,
+				43ADD5A3196D072C00176A49 /* SigninViewController.m */,
 				326EC0BF1963357000087EBD /* MasterViewController.h */,
 				326EC0C01963357000087EBD /* MasterViewController.m */,
 				326EC0C21963357000087EBD /* DetailViewController.h */,
@@ -532,6 +533,7 @@
 				4355FC22196B195A0059F0C7 /* Model.xcdatamodeld in Sources */,
 				4355FBFB196B11130059F0C7 /* Constants.m in Sources */,
 				4355FC1B196B11260059F0C7 /* Request.m in Sources */,
+				43ADD5A4196D072C00176A49 /* SigninViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,9 +670,6 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/joaqman/Documents/aws-ios-sdk-1.7.1",
-					"/Users/joaqman/Documents/aws-ios-sdk-1.7.1/ThirdParty",
-					/Users/joaqman/Documents/FacebookSDK,
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -689,9 +688,6 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/joaqman/Documents/aws-ios-sdk-1.7.1",
-					"/Users/joaqman/Documents/aws-ios-sdk-1.7.1/ThirdParty",
-					/Users/joaqman/Documents/FacebookSDK,
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
