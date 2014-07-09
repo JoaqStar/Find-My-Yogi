@@ -25,18 +25,18 @@
     return YES;
 }
 
-//- (BOOL)application:(UIApplication *)application
-//            openURL:(NSURL *)url
-//  sourceApplication:(NSString *)sourceApplication
-//         annotation:(id)annotation
-//{
-//    // attempt to extract a token from the url
-//    return [FBAppCall handleOpenURL:url
-//                  sourceApplication:sourceApplication
-//                    fallbackHandler:^(FBAppCall *call) {
-//                        NSLog(@"In fallback handler");
-//                    }];
-//}
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    // attempt to extract a token from the url
+    return [FBAppCall handleOpenURL:url
+                  sourceApplication:sourceApplication
+                    fallbackHandler:^(FBAppCall *call) {
+                        NSLog(@"In fallback handler");
+                    }];
+}
 
 /*
  * Callback for session changes.
@@ -75,7 +75,7 @@
  * Opens a Facebook session and optionally shows the login UX.
  */
 - (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI withCompletion:(void (^)(FBSession *session, NSError *error))callback  {
-    NSArray *permissions = [NSArray arrayWithObjects:@"basic_info", nil];
+    NSArray *permissions = [NSArray arrayWithObjects:@"public_profile", @"user_friends", nil];
     return [FBSession openActiveSessionWithReadPermissions:permissions
                                               allowLoginUI:YES
                                          completionHandler:^(FBSession *session,

@@ -28,7 +28,7 @@
  * This role should have appropriate policy to restrict actions to only required
  * services and resources.
  */
-#define FB_ROLE_ARN @"arn:aws:iam::234023849645:role/AwesomeFBUser"
+#define FB_ROLE_ARN @"arn:aws:iam::234023849645:role/YogiFBUser"
 
 #define IDP_NOT_ENABLED_MESSAGE      @"This provider is not enabled, please refer to Constants.h to enabled this provider"
 #define CREDENTIALS_ALERT_MESSAGE    @"Please update the Constants.h file with your Facebook or Google App settings."
