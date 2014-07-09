@@ -56,16 +56,15 @@
 		4355FC31196B2FE20059F0C7 /* YogiVenues.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC30196B2FE20059F0C7 /* YogiVenues.m */; };
 		4355FC34196B2FE20059F0C7 /* YogiEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC33196B2FE20059F0C7 /* YogiEvents.m */; };
 		4355FC37196B2FE20059F0C7 /* YogiPosts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC36196B2FE20059F0C7 /* YogiPosts.m */; };
-		4355FC3D196B30230059F0C7 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC38196B30230059F0C7 /* AWSDynamoDB.framework */; };
-		4355FC3E196B30230059F0C7 /* AWSPersistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC39196B30230059F0C7 /* AWSPersistence.framework */; };
-		4355FC3F196B30230059F0C7 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC3A196B30230059F0C7 /* AWSRuntime.framework */; };
-		4355FC40196B30230059F0C7 /* AWSSecurityTokenService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC3B196B30230059F0C7 /* AWSSecurityTokenService.framework */; };
-		4355FC41196B30230059F0C7 /* AWSSNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC3C196B30230059F0C7 /* AWSSNS.framework */; };
-		4355FC45196B31AE0059F0C7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC44196B31AE0059F0C7 /* FacebookSDK.framework */; };
 		4355FC47196B32350059F0C7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC46196B32350059F0C7 /* CoreData.framework */; };
 		4355FC4D196B36C20059F0C7 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC4C196B36C20059F0C7 /* libsqlite3.0.dylib */; };
 		4355FC4E196B37680059F0C7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC48196B32430059F0C7 /* Social.framework */; };
-		4355FC4F196B377F0059F0C7 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC4A196B32650059F0C7 /* AdSupport.framework */; };
+		43ADD597196CF7CD00176A49 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ADD593196CF7CD00176A49 /* AWSDynamoDB.framework */; };
+		43ADD598196CF7CD00176A49 /* AWSPersistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ADD594196CF7CD00176A49 /* AWSPersistence.framework */; };
+		43ADD599196CF7CD00176A49 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ADD595196CF7CD00176A49 /* AWSRuntime.framework */; };
+		43ADD59A196CF7CD00176A49 /* AWSSecurityTokenService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ADD596196CF7CD00176A49 /* AWSSecurityTokenService.framework */; };
+		43ADD59C196CF7E000176A49 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ADD59B196CF7E000176A49 /* FacebookSDK.framework */; };
+		43ADD59E196CF7F200176A49 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ADD59D196CF7F200176A49 /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,17 +160,15 @@
 		4355FC33196B2FE20059F0C7 /* YogiEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiEvents.m; sourceTree = "<group>"; };
 		4355FC35196B2FE20059F0C7 /* YogiPosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiPosts.h; sourceTree = "<group>"; };
 		4355FC36196B2FE20059F0C7 /* YogiPosts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiPosts.m; sourceTree = "<group>"; };
-		4355FC38196B30230059F0C7 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSDynamoDB.framework; path = "../../aws-ios-sdk-1.7.1/AWSDynamoDB.framework"; sourceTree = "<group>"; };
-		4355FC39196B30230059F0C7 /* AWSPersistence.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSPersistence.framework; path = "../../aws-ios-sdk-1.7.1/AWSPersistence.framework"; sourceTree = "<group>"; };
-		4355FC3A196B30230059F0C7 /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSRuntime.framework; path = "../../aws-ios-sdk-1.7.1/AWSRuntime.framework"; sourceTree = "<group>"; };
-		4355FC3B196B30230059F0C7 /* AWSSecurityTokenService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSSecurityTokenService.framework; path = "../../aws-ios-sdk-1.7.1/AWSSecurityTokenService.framework"; sourceTree = "<group>"; };
-		4355FC3C196B30230059F0C7 /* AWSSNS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSSNS.framework; path = "../../aws-ios-sdk-1.7.1/AWSSNS.framework"; sourceTree = "<group>"; };
-		4355FC42196B30490059F0C7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../../aws-ios-sdk-1.7.1/ThirdParty/FacebookSDK.framework"; sourceTree = "<group>"; };
-		4355FC44196B31AE0059F0C7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		4355FC46196B32350059F0C7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4355FC48196B32430059F0C7 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		4355FC4A196B32650059F0C7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		4355FC4C196B36C20059F0C7 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		43ADD593196CF7CD00176A49 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSDynamoDB.framework; sourceTree = "<group>"; };
+		43ADD594196CF7CD00176A49 /* AWSPersistence.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSPersistence.framework; sourceTree = "<group>"; };
+		43ADD595196CF7CD00176A49 /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSRuntime.framework; sourceTree = "<group>"; };
+		43ADD596196CF7CD00176A49 /* AWSSecurityTokenService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSSecurityTokenService.framework; sourceTree = "<group>"; };
+		43ADD59B196CF7E000176A49 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		43ADD59D196CF7F200176A49 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,18 +176,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4355FC4F196B377F0059F0C7 /* AdSupport.framework in Frameworks */,
+				43ADD59E196CF7F200176A49 /* AdSupport.framework in Frameworks */,
 				4355FC4E196B37680059F0C7 /* Social.framework in Frameworks */,
 				4355FC4D196B36C20059F0C7 /* libsqlite3.0.dylib in Frameworks */,
 				4355FC47196B32350059F0C7 /* CoreData.framework in Frameworks */,
-				4355FC45196B31AE0059F0C7 /* FacebookSDK.framework in Frameworks */,
-				4355FC3D196B30230059F0C7 /* AWSDynamoDB.framework in Frameworks */,
-				4355FC3E196B30230059F0C7 /* AWSPersistence.framework in Frameworks */,
-				4355FC3F196B30230059F0C7 /* AWSRuntime.framework in Frameworks */,
-				4355FC40196B30230059F0C7 /* AWSSecurityTokenService.framework in Frameworks */,
-				4355FC41196B30230059F0C7 /* AWSSNS.framework in Frameworks */,
+				43ADD599196CF7CD00176A49 /* AWSRuntime.framework in Frameworks */,
+				43ADD59A196CF7CD00176A49 /* AWSSecurityTokenService.framework in Frameworks */,
 				326EC0AA1963356F00087EBD /* CoreGraphics.framework in Frameworks */,
+				43ADD598196CF7CD00176A49 /* AWSPersistence.framework in Frameworks */,
 				326EC0AC1963356F00087EBD /* UIKit.framework in Frameworks */,
+				43ADD59C196CF7E000176A49 /* FacebookSDK.framework in Frameworks */,
+				43ADD597196CF7CD00176A49 /* AWSDynamoDB.framework in Frameworks */,
 				326EC0A81963356F00087EBD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,17 +228,15 @@
 		326EC0A61963356F00087EBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43ADD59D196CF7F200176A49 /* AdSupport.framework */,
+				43ADD59B196CF7E000176A49 /* FacebookSDK.framework */,
+				43ADD593196CF7CD00176A49 /* AWSDynamoDB.framework */,
+				43ADD594196CF7CD00176A49 /* AWSPersistence.framework */,
+				43ADD595196CF7CD00176A49 /* AWSRuntime.framework */,
+				43ADD596196CF7CD00176A49 /* AWSSecurityTokenService.framework */,
 				4355FC4C196B36C20059F0C7 /* libsqlite3.0.dylib */,
-				4355FC4A196B32650059F0C7 /* AdSupport.framework */,
 				4355FC48196B32430059F0C7 /* Social.framework */,
 				4355FC46196B32350059F0C7 /* CoreData.framework */,
-				4355FC44196B31AE0059F0C7 /* FacebookSDK.framework */,
-				4355FC42196B30490059F0C7 /* FacebookSDK.framework */,
-				4355FC38196B30230059F0C7 /* AWSDynamoDB.framework */,
-				4355FC39196B30230059F0C7 /* AWSPersistence.framework */,
-				4355FC3A196B30230059F0C7 /* AWSRuntime.framework */,
-				4355FC3B196B30230059F0C7 /* AWSSecurityTokenService.framework */,
-				4355FC3C196B30230059F0C7 /* AWSSNS.framework */,
 				326EC0A71963356F00087EBD /* Foundation.framework */,
 				326EC0A91963356F00087EBD /* CoreGraphics.framework */,
 				326EC0AB1963356F00087EBD /* UIKit.framework */,
@@ -661,6 +655,7 @@
 					"/Users/joaqman/Documents/aws-ios-sdk-1.7.1",
 					"/Users/joaqman/Documents/aws-ios-sdk-1.7.1/ThirdParty",
 					/Users/joaqman/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Find My Yogi/Find My Yogi-Prefix.pch";
@@ -681,6 +676,7 @@
 					"/Users/joaqman/Documents/aws-ios-sdk-1.7.1",
 					"/Users/joaqman/Documents/aws-ios-sdk-1.7.1/ThirdParty",
 					/Users/joaqman/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Find My Yogi/Find My Yogi-Prefix.pch";
