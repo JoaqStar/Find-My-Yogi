@@ -1,18 +1,19 @@
 //
-//  YogiUsers.h
+//  YogiUser.h
 //  Find My Yogi
 //
-//  Created by Joaquin Brown on 7/8/14.
+//  Created by Joaquin Brown on 7/9/14.
 //  Copyright (c) 2014 Joaquin Brown. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class YogiEvents, YogiPosts;
+@class YogiEvent, YogiPost;
 
-@interface YogiUsers : NSManagedObject
+@interface YogiUser : NSManagedObject
 
+@property (nonatomic, retain) NSString * bio;
 @property (nonatomic, retain) NSDate * createDate;
 @property (nonatomic, retain) NSString * deviceToken;
 @property (nonatomic, retain) NSString * emailAddress;
@@ -24,20 +25,19 @@
 @property (nonatomic, retain) NSString * loginType;
 @property (nonatomic, retain) NSString * password;
 @property (nonatomic, retain) NSString * userId;
-@property (nonatomic, retain) NSString * bio;
 @property (nonatomic, retain) NSSet *events;
 @property (nonatomic, retain) NSSet *posts;
 @end
 
-@interface YogiUsers (CoreDataGeneratedAccessors)
+@interface YogiUser (CoreDataGeneratedAccessors)
 
-- (void)addEventsObject:(YogiEvents *)value;
-- (void)removeEventsObject:(YogiEvents *)value;
+- (void)addEventsObject:(YogiEvent *)value;
+- (void)removeEventsObject:(YogiEvent *)value;
 - (void)addEvents:(NSSet *)values;
 - (void)removeEvents:(NSSet *)values;
 
-- (void)addPostsObject:(YogiPosts *)value;
-- (void)removePostsObject:(YogiPosts *)value;
+- (void)addPostsObject:(YogiPost *)value;
+- (void)removePostsObject:(YogiPost *)value;
 - (void)addPosts:(NSSet *)values;
 - (void)removePosts:(NSSet *)values;
 

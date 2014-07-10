@@ -35,9 +35,8 @@
 #define ACCESS_KEY_ID                @"USED_ONLY_FOR_TESTING"  // Leave this value as is.
 #define SECRET_KEY                   @"USED_ONLY_FOR_TESTING"  // Leave this value as is.
 
-#define USERS_TABLE                  @"AwesomeUsers"
+#define USERS_TABLE                  @"YogiUser"
 #define USERS_KEY                    @"userId"
-#define USERS_VERSIONS               @"version"
 
 #define LOCATIONS_TABLE              @"AwesomeLocations"
 #define LOCATIONS_HASH_KEY           @"locationKey"
