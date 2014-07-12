@@ -33,7 +33,7 @@
 }
 
 // Populate cell contents from passed-in data
--(void)loadCellFromUserFeedItem:(UserFeedItem *)feedItem
+- (void)loadCellFromUserFeedItem:(UserFeedItem *)feedItem
 {
     self.yogiNameLabel.text = feedItem.name;
     self.messageLabel.text = feedItem.message;

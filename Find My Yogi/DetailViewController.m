@@ -10,6 +10,15 @@
 
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
+@property (weak, nonatomic) IBOutlet UIButton *sundayButton;
+@property (weak, nonatomic) IBOutlet UIButton *mondayButton;
+@property (weak, nonatomic) IBOutlet UIButton *tuesdayButton;
+@property (weak, nonatomic) IBOutlet UIButton *wednesdayButton;
+@property (weak, nonatomic) IBOutlet UIButton *thursdayButton;
+@property (weak, nonatomic) IBOutlet UIButton *fridayButton;
+@property (weak, nonatomic) IBOutlet UIButton *saturdayButton;
+
+
 - (void)configureView;
 @end
 
@@ -51,6 +60,19 @@
         self.followButton.hidden = NO;
     }
 
+    // Make days of the week buttons round
+    self.sundayButton.layer.cornerRadius = self.sundayButton.bounds.size.width / 2.0;
+    self.mondayButton.layer.cornerRadius = self.mondayButton.bounds.size.width / 2.0;
+    self.tuesdayButton.layer.cornerRadius = self.tuesdayButton.bounds.size.width / 2.0;
+    self.wednesdayButton.layer.cornerRadius = self.wednesdayButton.bounds.size.width / 2.0;
+    self.thursdayButton.layer.cornerRadius = self.thursdayButton.bounds.size.width / 2.0;
+    self.fridayButton.layer.cornerRadius = self.fridayButton.bounds.size.width / 2.0;
+    self.saturdayButton.layer.cornerRadius = self.saturdayButton.bounds.size.width / 2.0;
+    
+    // Light up those days of the week that have events  /*! For testing */
+    self.mondayButton.backgroundColor = [UIColor lightGrayColor];
+    self.thursdayButton.backgroundColor = [UIColor lightGrayColor];
+    self.wednesdayButton.backgroundColor = [UIColor lightGrayColor];
 
 }
 
@@ -65,6 +87,24 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// The "daysOfWeek tappable layer" view is a temporary invisible UIView that sits on top of the
+// days-of-the-week buttons and accepts tap gestures.  Its purpose is to intercept taps so the
+// entire group of buttons acts as one large button.  When we add more calendar features and want
+// each day of the week to be a distinct button, simply delete this view and hook up the individual
+// buttons.
+- (IBAction)daysOfWeekTapped:(UITapGestureRecognizer *)sender {
+    NSLog(@"Tapped.");
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"calendarSegue"]) {
+       // [[segue destinationViewController] setDetailItem:object];
+        
+    }
 }
 
 #pragma mark - Split view

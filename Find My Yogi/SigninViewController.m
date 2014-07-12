@@ -57,7 +57,7 @@ typedef enum {
     AuthenticationStatus status = [self isAuthenticated];
     if (status == AuthenticationError) {
         [[[UIAlertView alloc] initWithTitle:@"Whoops!"
-                                    message:@"We could not connect to our Awesome Network. Please try again."
+                                    message:@"We could not connect to the Find My Yogi network. Please try again."
                                    delegate:self
                           cancelButtonTitle:@"OK"
                           otherButtonTitles:nil] show];
@@ -151,7 +151,7 @@ typedef enum {
     }
 }
 
--(void) getUserInfo:(FBSession *)session {
+- (void)getUserInfo:(FBSession *)session {
     static FBSession *savedSession;
     
     if (session == nil) {
@@ -213,7 +213,7 @@ typedef enum {
     NSLog(@"FBLoginView encountered an error=%@", error);
 }
 
--(void)stopActivityIndicator
+- (void)stopActivityIndicator
 {
     [self.facebookButton setHidden:NO];
     [self.activityIndicator stopAnimating];
