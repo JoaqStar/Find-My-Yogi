@@ -58,7 +58,7 @@ typedef enum {
     AuthenticationStatus status = [self isAuthenticated];
     if (status == AuthenticationError) {
         [[[UIAlertView alloc] initWithTitle:@"Whoops!"
-                                    message:@"We could not connect to the Find My Yogi network. Please try again."
+                                    message:@"We could not connect to the Yogi Network. Please try again."
                                    delegate:self
                           cancelButtonTitle:@"OK"
                           otherButtonTitles:nil] show];
