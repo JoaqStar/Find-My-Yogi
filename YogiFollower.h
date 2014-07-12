@@ -1,8 +1,8 @@
 //
-//  YogiFollowers.h
+//  YogiFollower.h
 //  Find My Yogi
 //
-//  Created by Joaquin Brown on 7/7/14.
+//  Created by Joaquin Brown on 7/9/14.
 //  Copyright (c) 2014 Joaquin Brown. All rights reserved.
 //
 
@@ -10,9 +10,9 @@
 #import <CoreData/CoreData.h>
 
 
-@interface YogiFollowers : NSManagedObject
+@interface YogiFollower : NSManagedObject
 
-@property (nonatomic, retain) NSString * userId;
 @property (nonatomic, retain) NSString * followerId;
+@property (nonatomic, retain) NSString * userId;
 
 @end

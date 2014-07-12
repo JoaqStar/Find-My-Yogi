@@ -1,8 +1,8 @@
 //
-//  YogiOms.h
+//  YogiOm.h
 //  Find My Yogi
 //
-//  Created by Joaquin Brown on 7/7/14.
+//  Created by Joaquin Brown on 7/9/14.
 //  Copyright (c) 2014 Joaquin Brown. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 
 
-@interface YogiOms : NSManagedObject
+@interface YogiOm : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * postId;
 @property (nonatomic, retain) NSString * userId;

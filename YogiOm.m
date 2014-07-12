@@ -1,15 +1,15 @@
 //
-//  YogiOms.m
+//  YogiOm.m
 //  Find My Yogi
 //
-//  Created by Joaquin Brown on 7/7/14.
+//  Created by Joaquin Brown on 7/9/14.
 //  Copyright (c) 2014 Joaquin Brown. All rights reserved.
 //
 
-#import "YogiOms.h"
+#import "YogiOm.h"
 
 
-@implementation YogiOms
+@implementation YogiOm
 
 @dynamic postId;
 @dynamic userId;

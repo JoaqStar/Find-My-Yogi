@@ -11,6 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "AmazonClientManager.h"
 #import "AppDelegate.h"
+#import "DataManager.h"
 #import "Tools.h"
 
 typedef enum {
@@ -167,8 +168,8 @@ typedef enum {
              if ([AmazonClientManager FBLogin:session]) {
                  
                  // add facebook user to database
-//                 DataManager *dataManager = [DataManager sharedManager];
-//                 [dataManager addFacebookUser:fbUser];
+                 DataManager *dataManager = [DataManager sharedManager];
+                 [dataManager addFacebookUser:fbUser];
                  [self performSegueWithIdentifier:@"feedSegue" sender:self];
                  [self.activityIndicator stopAnimating];
              } else {
