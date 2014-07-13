@@ -32,6 +32,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.navigationItem.title = @"Calendar";
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,7 +54,7 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 1;
+    return 0;
 }
 
 /*

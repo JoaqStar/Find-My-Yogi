@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "UserFeedItem.h"
+#import "PostsCell.h"
 
-@interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface DetailViewController : UIViewController <UISplitViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) UserFeedItem *detailItem;
 

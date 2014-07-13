@@ -35,6 +35,7 @@
 		326EC0F3196759F200087EBD /* Lizzie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0F0196759F200087EBD /* Lizzie.jpg */; };
 		326EC0F4196759F200087EBD /* Joaquin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0F1196759F200087EBD /* Joaquin.jpg */; };
 		326EC0F5196759F200087EBD /* Jeff_FB.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0F2196759F200087EBD /* Jeff_FB.jpg */; };
+		32823349197206EE00717E9B /* PostsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32823348197206EE00717E9B /* PostsCell.m */; };
 		32DF00B71971C66100F116DE /* CalendarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DF00B61971C66100F116DE /* CalendarTableViewController.m */; };
 		4355FBF7196B11130059F0C7 /* AWSPersistenceDynamoDBIncrementalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FBEC196B11130059F0C7 /* AWSPersistenceDynamoDBIncrementalStore.m */; };
 		4355FBF8196B11130059F0C7 /* AmazonWIFKeyChainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355FBEE196B11130059F0C7 /* AmazonWIFKeyChainWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -121,6 +122,8 @@
 		326EC0F0196759F200087EBD /* Lizzie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lizzie.jpg; sourceTree = "<group>"; };
 		326EC0F1196759F200087EBD /* Joaquin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Joaquin.jpg; sourceTree = "<group>"; };
 		326EC0F2196759F200087EBD /* Jeff_FB.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jeff_FB.jpg; sourceTree = "<group>"; };
+		32823347197206EE00717E9B /* PostsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostsCell.h; path = ../PostsCell.h; sourceTree = "<group>"; };
+		32823348197206EE00717E9B /* PostsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostsCell.m; path = ../PostsCell.m; sourceTree = "<group>"; };
 		32DF00B51971C66100F116DE /* CalendarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarTableViewController.h; sourceTree = "<group>"; };
 		32DF00B61971C66100F116DE /* CalendarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarTableViewController.m; sourceTree = "<group>"; };
 		4355FBEB196B11130059F0C7 /* AWSPersistenceDynamoDBIncrementalStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSPersistenceDynamoDBIncrementalStore.h; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 				326EC0C31963357000087EBD /* DetailViewController.m */,
 				326EC0E71963712F00087EBD /* UserFeedCell.h */,
 				326EC0E81963712F00087EBD /* UserFeedCell.m */,
+				32823347197206EE00717E9B /* PostsCell.h */,
+				32823348197206EE00717E9B /* PostsCell.m */,
 				32DF00B51971C66100F116DE /* CalendarTableViewController.h */,
 				32DF00B61971C66100F116DE /* CalendarTableViewController.m */,
 				326EC0C51963357000087EBD /* Images.xcassets */,
@@ -526,6 +531,7 @@
 				43A07876196E5A5200E56B57 /* YogiFollower.m in Sources */,
 				4355FC14196B11260059F0C7 /* AmazonTVMClient.m in Sources */,
 				4355FC1C196B11260059F0C7 /* RequestDelegate.m in Sources */,
+				32823349197206EE00717E9B /* PostsCell.m in Sources */,
 				43A07873196E5A5200E56B57 /* YogiUser.m in Sources */,
 				326EC0B41963356F00087EBD /* main.m in Sources */,
 				326EC0C41963357000087EBD /* DetailViewController.m in Sources */,
@@ -537,9 +543,7 @@
 				43A07879196E5A5200E56B57 /* YogiLocation.m in Sources */,
 				4355FC1A196B11260059F0C7 /* RegisterDeviceRequest.m in Sources */,
 				4355FBF8196B11130059F0C7 /* AmazonWIFKeyChainWrapper.m in Sources */,
-				4355FC28196B2FE10059F0C7 /* YogiLocations.m in Sources */,
 				32DF00B71971C66100F116DE /* CalendarTableViewController.m in Sources */,
-				4355FC25196B2FE10059F0C7 /* YogiFollowers.m in Sources */,
 				4355FBFC196B11130059F0C7 /* Utilities.m in Sources */,
 				43A07882196E5A5200E56B57 /* YogiPost.m in Sources */,
 				4355FC22196B195A0059F0C7 /* Model.xcdatamodeld in Sources */,

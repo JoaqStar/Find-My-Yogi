@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *thursdayButton;
 @property (weak, nonatomic) IBOutlet UIButton *fridayButton;
 @property (weak, nonatomic) IBOutlet UIButton *saturdayButton;
+@property (weak, nonatomic) IBOutlet UITableView *postsTableView;
 
 
 - (void)configureView;
@@ -121,6 +122,28 @@
     // Called when the view is shown again in the split view, invalidating the button and popover controller.
     [self.navigationItem setLeftBarButtonItem:nil animated:YES];
     self.masterPopoverController = nil;
+}
+
+#pragma mark - Table View
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    PostsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostsCell" forIndexPath:indexPath];
+    
+   // UserFeedItem *item = self.userFeedItems[indexPath.row];
+   // [cell loadCellFromUserFeedItem:item];
+    
+    return cell;
 }
 
 @end
