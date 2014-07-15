@@ -635,8 +635,8 @@ NSString *const AWSPersistenceDynamoDBUserAgentPrefix = @"Persistence Framework"
             
         }
         
-        DynamoDBGetItemRequest *getItemRequest = [[DynamoDBGetItemRequest alloc] initWithTableName:[self tableNameForEntityName:request.entity.name]
-                                                                                            andKey:key];
+        DynamoDBGetItemRequest *getItemRequest = [[DynamoDBGetItemRequest alloc] initWithTableName:[self tableNameForEntityName:request.entity.name] andKey:key];
+        
         getItemRequest.consistentRead = YES;
 
         NSMutableArray *attributesToGet = [NSMutableArray array];

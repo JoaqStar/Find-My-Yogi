@@ -78,102 +78,102 @@
     }
 
     //Create Table
-    ctr = [DynamoDBCreateTableRequest new];
-    ctr.tableName = LOCATIONS_TABLE;
-    
-    hashKey = [DynamoDBKeySchemaElement new];
-    hashKey.attributeName = LOCATIONS_HASH_KEY;
-    hashKey.keyType = @"HASH";
-    [ctr addKeySchema:hashKey];
-    hashAttDef = [DynamoDBAttributeDefinition new];
-    hashAttDef.attributeName = LOCATIONS_HASH_KEY;
-    hashAttDef.attributeType = @"N";
-    [ctr addAttributeDefinition:hashAttDef];
-
+//    ctr = [DynamoDBCreateTableRequest new];
+//    ctr.tableName = LOCATIONS_TABLE;
+//    
+//    hashKey = [DynamoDBKeySchemaElement new];
+//    hashKey.attributeName = LOCATIONS_HASH_KEY;
+//    hashKey.keyType = @"HASH";
+//    [ctr addKeySchema:hashKey];
+//    hashAttDef = [DynamoDBAttributeDefinition new];
+//    hashAttDef.attributeName = LOCATIONS_HASH_KEY;
+//    hashAttDef.attributeType = @"N";
+//    [ctr addAttributeDefinition:hashAttDef];
+//
+////    DynamoDBKeySchemaElement *rangeKey = [DynamoDBKeySchemaElement new];
+////    rangeKey.attributeName = LOCATIONS_RANGE_KEY;
+////    rangeKey.keyType = @"RANGE";
+////    [ctr addKeySchema:rangeKey];
+////    DynamoDBAttributeDefinition *rangeAttDef = [DynamoDBAttributeDefinition new];
+////    rangeAttDef.attributeName = LOCATIONS_RANGE_KEY;
+////    rangeAttDef.attributeType = @"S";
+////    [ctr addAttributeDefinition:rangeAttDef];
+//    
+//    provisionedThroughput = [DynamoDBProvisionedThroughput new];
+//    provisionedThroughput.readCapacityUnits  = [NSNumber numberWithInt:10];
+//    provisionedThroughput.writeCapacityUnits = [NSNumber numberWithInt:5];
+//    ctr.provisionedThroughput = provisionedThroughput;
+//    
+//    NSLog(@"Creating Locations table");
+//    
+//    ctResponse = [tempdb createTable:ctr];
+//    if(ctResponse.error == nil)
+//    {
+//        NSLog(@"Created %@", ctResponse.tableDescription.tableName);
+//    }
+//    else
+//    {
+//        NSException *exception = [ctResponse.error.userInfo objectForKey:@"exception"];
+//        
+//        if([exception isKindOfClass:[DynamoDBResourceInUseException class]])
+//        {
+//            NSLog(@"Table already created");
+//        }
+//        else
+//        {
+//            NSLog(@"Problem creating table, %@", ctResponse.error);
+//            return NO;
+//        }
+//    }
+//
+//    //Create Table
+//    ctr = [DynamoDBCreateTableRequest new];
+//    ctr.tableName = AWESOME_TABLE;
+//    
+//    hashKey = [DynamoDBKeySchemaElement new];
+//    hashKey.attributeName = AWESOME_HASH_KEY;
+//    hashKey.keyType = @"HASH";
+//    [ctr addKeySchema:hashKey];
+//    hashAttDef = [DynamoDBAttributeDefinition new];
+//    hashAttDef.attributeName = AWESOME_HASH_KEY;
+//    hashAttDef.attributeType = @"S";
+//    [ctr addAttributeDefinition:hashAttDef];
+//    
 //    DynamoDBKeySchemaElement *rangeKey = [DynamoDBKeySchemaElement new];
-//    rangeKey.attributeName = LOCATIONS_RANGE_KEY;
+//    rangeKey.attributeName = AWESOME_RANGE_KEY;
 //    rangeKey.keyType = @"RANGE";
 //    [ctr addKeySchema:rangeKey];
 //    DynamoDBAttributeDefinition *rangeAttDef = [DynamoDBAttributeDefinition new];
-//    rangeAttDef.attributeName = LOCATIONS_RANGE_KEY;
+//    rangeAttDef.attributeName = AWESOME_RANGE_KEY;
 //    rangeAttDef.attributeType = @"S";
 //    [ctr addAttributeDefinition:rangeAttDef];
-    
-    provisionedThroughput = [DynamoDBProvisionedThroughput new];
-    provisionedThroughput.readCapacityUnits  = [NSNumber numberWithInt:10];
-    provisionedThroughput.writeCapacityUnits = [NSNumber numberWithInt:5];
-    ctr.provisionedThroughput = provisionedThroughput;
-    
-    NSLog(@"Creating Locations table");
-    
-    ctResponse = [tempdb createTable:ctr];
-    if(ctResponse.error == nil)
-    {
-        NSLog(@"Created %@", ctResponse.tableDescription.tableName);
-    }
-    else
-    {
-        NSException *exception = [ctResponse.error.userInfo objectForKey:@"exception"];
-        
-        if([exception isKindOfClass:[DynamoDBResourceInUseException class]])
-        {
-            NSLog(@"Table already created");
-        }
-        else
-        {
-            NSLog(@"Problem creating table, %@", ctResponse.error);
-            return NO;
-        }
-    }
-
-    //Create Table
-    ctr = [DynamoDBCreateTableRequest new];
-    ctr.tableName = AWESOME_TABLE;
-    
-    hashKey = [DynamoDBKeySchemaElement new];
-    hashKey.attributeName = AWESOME_HASH_KEY;
-    hashKey.keyType = @"HASH";
-    [ctr addKeySchema:hashKey];
-    hashAttDef = [DynamoDBAttributeDefinition new];
-    hashAttDef.attributeName = AWESOME_HASH_KEY;
-    hashAttDef.attributeType = @"S";
-    [ctr addAttributeDefinition:hashAttDef];
-    
-    DynamoDBKeySchemaElement *rangeKey = [DynamoDBKeySchemaElement new];
-    rangeKey.attributeName = AWESOME_RANGE_KEY;
-    rangeKey.keyType = @"RANGE";
-    [ctr addKeySchema:rangeKey];
-    DynamoDBAttributeDefinition *rangeAttDef = [DynamoDBAttributeDefinition new];
-    rangeAttDef.attributeName = AWESOME_RANGE_KEY;
-    rangeAttDef.attributeType = @"S";
-    [ctr addAttributeDefinition:rangeAttDef];
-    
-    provisionedThroughput = [DynamoDBProvisionedThroughput new];
-    provisionedThroughput.readCapacityUnits  = [NSNumber numberWithInt:10];
-    provisionedThroughput.writeCapacityUnits = [NSNumber numberWithInt:5];
-    ctr.provisionedThroughput = provisionedThroughput;
-    
-    NSLog(@"Creating Awesome table");
-    
-    ctResponse = [tempdb createTable:ctr];
-    if(ctResponse.error == nil)
-    {
-        NSLog(@"Created %@", ctResponse.tableDescription.tableName);
-    }
-    else
-    {
-        NSException *exception = [ctResponse.error.userInfo objectForKey:@"exception"];
-        
-        if([exception isKindOfClass:[DynamoDBResourceInUseException class]])
-        {
-            NSLog(@"Table already created");
-        }
-        else
-        {
-            NSLog(@"Problem creating table, %@", ctResponse.error);
-            return NO;
-        }
-    }
+//    
+//    provisionedThroughput = [DynamoDBProvisionedThroughput new];
+//    provisionedThroughput.readCapacityUnits  = [NSNumber numberWithInt:10];
+//    provisionedThroughput.writeCapacityUnits = [NSNumber numberWithInt:5];
+//    ctr.provisionedThroughput = provisionedThroughput;
+//    
+//    NSLog(@"Creating Awesome table");
+//    
+//    ctResponse = [tempdb createTable:ctr];
+//    if(ctResponse.error == nil)
+//    {
+//        NSLog(@"Created %@", ctResponse.tableDescription.tableName);
+//    }
+//    else
+//    {
+//        NSException *exception = [ctResponse.error.userInfo objectForKey:@"exception"];
+//        
+//        if([exception isKindOfClass:[DynamoDBResourceInUseException class]])
+//        {
+//            NSLog(@"Table already created");
+//        }
+//        else
+//        {
+//            NSLog(@"Problem creating table, %@", ctResponse.error);
+//            return NO;
+//        }
+//    }
     
     [Utilities waitForTable:USERS_TABLE toTransitionToStatus:@"ACTIVE"];
     [Utilities waitForTable:LOCATIONS_TABLE toTransitionToStatus:@"ACTIVE"];

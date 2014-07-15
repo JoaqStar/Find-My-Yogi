@@ -134,7 +134,7 @@ static AmazonDynamoDBClient *ddb = nil;
         credentials = [AmazonAnonymousKeyChainWrapper getCredentialsFromKeyChain];
         ddb = [[AmazonDynamoDBClient alloc] initWithCredentials:credentials];
     }
-    ddb.endpoint = [AmazonEndpoints ddbEndpoint:US_WEST_2];
+    ddb.endpoint = [AmazonEndpoints ddbEndpoint:US_WEST_1];
     ddb.timeout = 10;
 }
 

@@ -67,6 +67,7 @@
     
     user.userId = userId;
     user.createDate = [NSDate date];
+    user.isYogi = [NSNumber numberWithBool:YES];
     [self setTokenAndEndpointARNForUser:user];
     
     self.thisUserId = user.userId;
@@ -190,6 +191,8 @@
 #pragma mark - Error handling
 - (void)throwError:(NSError *)error
 {
+    NSLog(@"Error is %@", error);
+    
     [[[UIAlertView alloc] initWithTitle:@"Whoops!"
                                 message:@"We could not connect to the Yogi Network. Please try again."
                                delegate:nil
@@ -306,11 +309,9 @@
 //                               LOCATIONS_RANGE_KEY, @"Location",
 //                               AWESOME_RANGE_KEY, @"Awesome",
 //                               nil];
-//    NSDictionary *versions = [NSDictionary dictionaryWithObjectsAndKeys:
-//                              USERS_VERSIONS, @"UserInfo",
-//                              LOCATIONS_VERSIONS, @"Location",
-//                              AWESOME_VERSIONS, @"Awesome",
-//                              nil];
+    NSDictionary *versions = [NSDictionary dictionaryWithObjectsAndKeys:
+                              USERS_VERSIONS,USERS_TABLE,
+                              nil];
     NSDictionary *tableMapper = [NSDictionary dictionaryWithObjectsAndKeys:
                                  USERS_TABLE, USERS_TABLE,
                                  nil];
@@ -322,10 +323,11 @@
     //AmazonClientManager *provider = [AmazonClientManager new];
     
     AmazonDynamoDBClient *ddb = [[AmazonDynamoDBClient alloc] initWithCredentialsProvider:provider];
-    ddb.endpoint = [AmazonEndpoints ddbEndpoint:US_WEST_2];
+    ddb.endpoint = [AmazonEndpoints ddbEndpoint:US_WEST_1];
     
     NSDictionary *storeOoptions = [NSDictionary dictionaryWithObjectsAndKeys:
                              hashKeys, AWSPersistenceDynamoDBHashKey,
+                             versions, AWSPersistenceDynamoDBVersionKey,
 //                             rangeKeys, AWSPersistenceDynamoDBRangeKey,
                              ddb, AWSPersistenceDynamoDBClient,
                              tableMapper, AWSPersistenceDynamoDBTableMapper, nil];

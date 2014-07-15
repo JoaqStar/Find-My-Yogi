@@ -37,6 +37,7 @@
 
 #define USERS_TABLE                  @"YogiUser"
 #define USERS_KEY                    @"userId"
+#define USERS_VERSIONS               @"version"
 
 #define LOCATIONS_TABLE              @"AwesomeLocations"
 #define LOCATIONS_HASH_KEY           @"locationKey"

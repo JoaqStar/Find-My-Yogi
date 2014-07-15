@@ -13,6 +13,7 @@
 #import "AppDelegate.h"
 #import "DataManager.h"
 #import "Tools.h"
+#import "Utilities.h"
 
 typedef enum {
     AuthenticationError = -1,
@@ -103,6 +104,8 @@ typedef enum {
                                     NSLog(@"Could not login to facebook because: %@", error);
                                 } else {
                                     NSLog(@"Successfuly logged into facebook");
+                                    //[Utilities setupTables];
+                                    [self getUserInfo:session];
                                 }
                             }];
                         }
@@ -139,7 +142,7 @@ typedef enum {
             } else {
                 [self.facebookButton setHidden:NO];
                 [self.activityIndicator stopAnimating];
-                NSString *alertMessage = @"Awesome does not have access to your facebook.\nGo to Settings->Facebook and allow Awesome. to user your account.";
+                NSString *alertMessage = @"Find My Yogi does not have access to your facebook.\nGo to Settings->Facebook and allow Awesome. to user your account.";
                 [[[UIAlertView alloc] initWithTitle:@"Whoops!"
                                             message:alertMessage
                                            delegate:nil
@@ -166,7 +169,6 @@ typedef enum {
          if (!error) {
              NSLog(@"User is %@", fbUser);
              if ([AmazonClientManager FBLogin:session]) {
-                 
                  // add facebook user to database
                  DataManager *dataManager = [DataManager sharedManager];
                  [dataManager addFacebookUser:fbUser];
