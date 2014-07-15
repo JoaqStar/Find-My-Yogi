@@ -2,13 +2,13 @@
 //  DetailViewController.m
 //  Find My Yogi
 //
-//  Created by Jeff on 7/1/14.
+//  Created by Jeff Berman on 7/1/14.
 //  Copyright (c) 2014 Joaquin Brown. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "YogiViewController.h"
 
-@interface DetailViewController ()
+@interface YogiViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 @property (weak, nonatomic) IBOutlet UIButton *sundayButton;
 @property (weak, nonatomic) IBOutlet UIButton *mondayButton;
@@ -23,7 +23,7 @@
 - (void)configureView;
 @end
 
-@implementation DetailViewController
+@implementation YogiViewController
 
 #pragma mark - Managing the detail item
 

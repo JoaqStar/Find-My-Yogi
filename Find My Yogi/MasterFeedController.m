@@ -1,24 +1,24 @@
 //
-//  MasterViewController.m
+//  MasterFeedController.m
 //  Find My Yogi
 //
-//  Created by Jeff on 7/1/14.
+//  Created by Jeff Berman on 7/1/14.
 //  Copyright (c) 2014 Joaquin Brown. All rights reserved.
 //
 
-#import "MasterViewController.h"
+#import "MasterFeedController.h"
 
-#import "DetailViewController.h"
+#import "YogiViewController.h"
 #import "UserFeedCell.h"
 #import "UserFeedItem.h"
 
-@interface MasterViewController ()
+@interface MasterFeedController ()
 
 @property (strong, nonatomic) NSMutableArray *userFeedItems;  // Array of main feed items
 
 @end
 
-@implementation MasterViewController
+@implementation MasterFeedController
 
 -(NSMutableArray *)userFeedItems
 {
@@ -54,7 +54,7 @@
     // This was template code to add a "+" button in nav bar
 //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
 //    self.navigationItem.rightBarButtonItem = addButton;
-    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    self.yogiViewController = (YogiViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
     // Register UserFeedCell class for UITableView -- Not needed when using storyboard?
 /*!    [self.tableView registerClass:[UserFeedCell class] forCellReuseIdentifier:@"UserFeedCell"]; */
@@ -161,7 +161,7 @@
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UserFeedItem *object = self.userFeedItems[indexPath.row];
-        self.detailViewController.detailItem = object;
+        self.yogiViewController.detailItem = object;
     }
 }
 

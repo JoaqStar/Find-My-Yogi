@@ -2,7 +2,7 @@
 //  DetailViewController.h
 //  Find My Yogi
 //
-//  Created by Jeff on 7/1/14.
+//  Created by Jeff Berman on 7/1/14.
 //  Copyright (c) 2014 Joaquin Brown. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 #import "UserFeedItem.h"
 #import "PostsCell.h"
 
-@interface DetailViewController : UIViewController <UISplitViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface YogiViewController : UIViewController <UISplitViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) UserFeedItem *detailItem;
 

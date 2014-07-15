@@ -19,8 +19,8 @@
 		326EC0B81963356F00087EBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0B71963356F00087EBD /* AppDelegate.m */; };
 		326EC0BB1963357000087EBD /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0B91963357000087EBD /* Main_iPhone.storyboard */; };
 		326EC0BE1963357000087EBD /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0BC1963357000087EBD /* Main_iPad.storyboard */; };
-		326EC0C11963357000087EBD /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0C01963357000087EBD /* MasterViewController.m */; };
-		326EC0C41963357000087EBD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0C31963357000087EBD /* DetailViewController.m */; };
+		326EC0C11963357000087EBD /* MasterFeedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0C01963357000087EBD /* MasterFeedController.m */; };
+		326EC0C41963357000087EBD /* YogiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EC0C31963357000087EBD /* YogiViewController.m */; };
 		326EC0C61963357000087EBD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 326EC0C51963357000087EBD /* Images.xcassets */; };
 		326EC0CD1963357000087EBD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326EC0CC1963357000087EBD /* XCTest.framework */; };
 		326EC0CE1963357000087EBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326EC0A71963356F00087EBD /* Foundation.framework */; };
@@ -101,10 +101,10 @@
 		326EC0B71963356F00087EBD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		326EC0BA1963357000087EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		326EC0BD1963357000087EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		326EC0BF1963357000087EBD /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		326EC0C01963357000087EBD /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		326EC0C21963357000087EBD /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		326EC0C31963357000087EBD /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		326EC0BF1963357000087EBD /* MasterFeedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterFeedController.h; sourceTree = "<group>"; };
+		326EC0C01963357000087EBD /* MasterFeedController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterFeedController.m; sourceTree = "<group>"; };
+		326EC0C21963357000087EBD /* YogiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YogiViewController.h; sourceTree = "<group>"; };
+		326EC0C31963357000087EBD /* YogiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YogiViewController.m; sourceTree = "<group>"; };
 		326EC0C51963357000087EBD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		326EC0CB1963357000087EBD /* Find My YogiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Find My YogiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		326EC0CC1963357000087EBD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -272,10 +272,10 @@
 				326EC0BC1963357000087EBD /* Main_iPad.storyboard */,
 				43ADD5A2196D072C00176A49 /* SigninViewController.h */,
 				43ADD5A3196D072C00176A49 /* SigninViewController.m */,
-				326EC0BF1963357000087EBD /* MasterViewController.h */,
-				326EC0C01963357000087EBD /* MasterViewController.m */,
-				326EC0C21963357000087EBD /* DetailViewController.h */,
-				326EC0C31963357000087EBD /* DetailViewController.m */,
+				326EC0BF1963357000087EBD /* MasterFeedController.h */,
+				326EC0C01963357000087EBD /* MasterFeedController.m */,
+				326EC0C21963357000087EBD /* YogiViewController.h */,
+				326EC0C31963357000087EBD /* YogiViewController.m */,
 				326EC0E71963712F00087EBD /* UserFeedCell.h */,
 				326EC0E81963712F00087EBD /* UserFeedCell.m */,
 				32823347197206EE00717E9B /* PostsCell.h */,
@@ -523,7 +523,7 @@
 				326EC0E61963645300087EBD /* Tools.m in Sources */,
 				4355FBFA196B11130059F0C7 /* AmazonClientManager.m in Sources */,
 				4355FC1D196B11260059F0C7 /* Response.m in Sources */,
-				326EC0C11963357000087EBD /* MasterViewController.m in Sources */,
+				326EC0C11963357000087EBD /* MasterFeedController.m in Sources */,
 				4355FC19196B11260059F0C7 /* JSONUtilities.m in Sources */,
 				4355FBF9196B11130059F0C7 /* AmazonAnonymousKeyChainWrapper.m in Sources */,
 				4355FC18196B11260059F0C7 /* GetTokenResponseHandler.m in Sources */,
@@ -534,7 +534,7 @@
 				32823349197206EE00717E9B /* PostsCell.m in Sources */,
 				43A07873196E5A5200E56B57 /* YogiUser.m in Sources */,
 				326EC0B41963356F00087EBD /* main.m in Sources */,
-				326EC0C41963357000087EBD /* DetailViewController.m in Sources */,
+				326EC0C41963357000087EBD /* YogiViewController.m in Sources */,
 				4355FC17196B11260059F0C7 /* GetTokenResponse.m in Sources */,
 				326EC0E91963712F00087EBD /* UserFeedCell.m in Sources */,
 				43A07843196E4C3000E56B57 /* DataManager.m in Sources */,
