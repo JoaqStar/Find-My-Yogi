@@ -2,13 +2,12 @@
 //  YogiUser.m
 //  Find My Yogi
 //
-//  Created by Joaquin Brown on 7/9/14.
+//  Created by Joaquin Brown on 7/15/14.
 //  Copyright (c) 2014 Joaquin Brown. All rights reserved.
 //
 
 #import "YogiUser.h"
 #import "YogiEvent.h"
-#import "YogiPost.h"
 
 
 @implementation YogiUser
@@ -26,6 +25,5 @@
 @dynamic password;
 @dynamic userId;
 @dynamic events;
-@dynamic posts;
 
 @end

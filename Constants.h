@@ -39,15 +39,16 @@
 #define USERS_KEY                    @"userId"
 #define USERS_VERSIONS               @"version"
 
+#define POST_TABLE                   @"YogiPost"
+#define POST_HASH_KEY                @"userId"
+#define POST_RANGE_KEY               @"postDate"
+#define POST_VERSIONS                @"version"
+
 #define LOCATIONS_TABLE              @"AwesomeLocations"
 #define LOCATIONS_HASH_KEY           @"locationKey"
 #define LOCATIONS_RANGE_KEY          @"userId"
 #define LOCATIONS_VERSIONS           @"version"
 
-#define AWESOME_TABLE                @"AwesomeTable"
-#define AWESOME_HASH_KEY             @"myUserId"
-#define AWESOME_RANGE_KEY            @"rangeKey"
-#define AWESOME_VERSIONS             @"version"
 
 
 @interface Constants:NSObject {

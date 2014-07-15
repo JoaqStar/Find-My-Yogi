@@ -9,6 +9,9 @@
 #import "MasterFeedController.h"
 
 #import "YogiViewController.h"
+#import "DataManager.h"
+#import "YogiUser.h"
+#import "YogiPost.h"
 #import "UserFeedCell.h"
 #import "UserFeedItem.h"
 
@@ -83,6 +86,12 @@
     item.name = @"Jeff Berman";
     item.message = @"I'll be at YogaExpo at booth 119 all day, stop by and say hello!";
     [self.userFeedItems addObject:item];
+    
+    NSArray *feedArray = [[DataManager sharedManager] getFeedForThisUser];
+    
+    for (YogiPost *post in feedArray) {
+        NSLog(@"Post message is %@", post.message);
+    }
 }
 
 - (void)search:(id)sender

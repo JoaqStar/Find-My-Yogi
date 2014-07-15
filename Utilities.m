@@ -177,7 +177,7 @@
     
     [Utilities waitForTable:USERS_TABLE toTransitionToStatus:@"ACTIVE"];
     [Utilities waitForTable:LOCATIONS_TABLE toTransitionToStatus:@"ACTIVE"];
-    [Utilities waitForTable:AWESOME_TABLE toTransitionToStatus:@"ACTIVE"];
+    [Utilities waitForTable:POST_TABLE toTransitionToStatus:@"ACTIVE"];
     
     return YES;
 }

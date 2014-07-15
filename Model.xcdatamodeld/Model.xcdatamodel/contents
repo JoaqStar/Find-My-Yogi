@@ -7,7 +7,7 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="venueId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogiPost" inverseName="event" inverseEntity="YogiPost" syncable="YES"/>
+        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogiPost" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogiUser" inverseName="events" inverseEntity="YogiUser" syncable="YES"/>
         <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogiVenue" inverseName="events" inverseEntity="YogiVenue" syncable="YES"/>
     </entity>
@@ -32,8 +32,6 @@
         <attribute name="postDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="postId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogiEvent" inverseName="post" inverseEntity="YogiEvent" syncable="YES"/>
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogiUser" inverseName="posts" inverseEntity="YogiUser" syncable="YES"/>
     </entity>
     <entity name="YogiUser" representedClassName="YogiUser" syncable="YES">
         <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
@@ -49,7 +47,6 @@
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="YogiEvent" inverseName="user" inverseEntity="YogiEvent" syncable="YES"/>
-        <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="YogiPost" inverseName="user" inverseEntity="YogiPost" syncable="YES"/>
     </entity>
     <entity name="YogiVenue" representedClassName="YogiVenue" syncable="YES">
         <attribute name="address1" optional="YES" attributeType="String" syncable="YES"/>
@@ -68,8 +65,8 @@
         <element name="YogiFollower" positionX="-36" positionY="81" width="128" height="73"/>
         <element name="YogiLocation" positionX="-54" positionY="72" width="128" height="118"/>
         <element name="YogiOm" positionX="36" positionY="171" width="128" height="73"/>
-        <element name="YogiPost" positionX="-18" positionY="90" width="128" height="148"/>
-        <element name="YogiUser" positionX="-63" positionY="-18" width="128" height="253"/>
+        <element name="YogiPost" positionX="-18" positionY="90" width="128" height="120"/>
+        <element name="YogiUser" positionX="-63" positionY="-18" width="128" height="240"/>
         <element name="YogiVenue" positionX="18" positionY="126" width="128" height="193"/>
     </elements>
 </model>

@@ -38,8 +38,6 @@
         
         // call managed context just to set up context and to set up persistant store coordianator 
         [self managedObjectContext];
-        
-        [self getThisUser:nil];
     }
     return self;
 }
@@ -59,13 +57,16 @@
     
     return YES;
 }
-- (NSString *)addUser:(NSString *)userId
+- (NSString *)addUser:(NSDictionary *)fbUser
 {
     NSManagedObjectContext *context = [self managedObjectContext];
     
     YogiUser *user = [NSEntityDescription insertNewObjectForEntityForName:USERS_TABLE inManagedObjectContext:context];
     
-    user.userId = userId;
+    user.userId = fbUser[@"id"];
+    user.firstName = fbUser[@"first_name"];
+    user.lastName = fbUser[@"last_name"];
+    user.password = fbUser[@"facebook"];
     user.createDate = [NSDate date];
     user.isYogi = [NSNumber numberWithBool:YES];
     [self setTokenAndEndpointARNForUser:user];
@@ -80,10 +81,17 @@
     YogiUser *user = [self getThisUser:fbUser[@"id"]];
     
     if (user == nil) {
-        return [self addUser:fbUser[@"id"]];
-    } else {
-        return @"success";
+        return [self addUser:fbUser];
+    } else if (user.firstName == nil) {
+        
+        user.firstName = fbUser[@"first_name"];
+        user.lastName = fbUser[@"last_name"];
+        user.password = fbUser[@"facebook"];
+        
+        [self saveContext];
     }
+    
+    return @"success";
 }
 
 - (void)delete:(NSManagedObject *)object
@@ -108,7 +116,7 @@
         NSFetchRequest *request = [[NSFetchRequest alloc] init];
         [request setEntity:entity];
         
-        NSString *queryString = [NSString stringWithFormat:@"%@ = %@", USERS_KEY, userId];
+        NSString *queryString = [NSString stringWithFormat:@"%@ = '%@'", USERS_KEY, userId];
         NSPredicate *predicate = [NSPredicate predicateWithFormat:queryString];
         [request setPredicate:predicate];
         
@@ -118,17 +126,9 @@
         if (error) {
             [self throwError:error];
             return nil;
-        }
-        
-        if ([users count] == 0) {
-            [self addUser:userId];
         } else {
-            user = [users objectAtIndex:0];
-            user.lastLogin = [NSDate date];
-            [self setTokenAndEndpointARNForUser:user];
+            user = [users lastObject];
             self.thisUserId = user.userId;
-            
-            [self saveContext];
         }
         
         return user;
@@ -185,6 +185,34 @@
         }
         
         return endpointARN;
+    }
+}
+
+- (NSArray *) getFeedForThisUser
+{
+    @synchronized([self class])
+    {
+        NSArray *feedArray;
+        
+        NSManagedObjectContext *context = [self managedObjectContext];
+        
+        NSEntityDescription *entity = [NSEntityDescription
+                                       entityForName:POST_TABLE inManagedObjectContext:context];
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        [request setEntity:entity];
+        
+        NSPredicate *predicate = [NSPredicate
+                                  predicateWithFormat:@"%@ = %@", POST_HASH_KEY, self.thisUserId];
+        [request setPredicate:predicate];
+        
+        NSError *error;
+        feedArray = [context executeFetchRequest:request error:&error];
+        
+        if (error) {
+            NSLog(@"Error was %@", error);
+        }
+        
+        return feedArray;
     }
 }
 
@@ -264,56 +292,21 @@
     // Instantiates PersistentStoreCoordinator
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     
-//    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Model.sqlite"];
-//    
-//    // handle db upgrade
-//    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
-//                             [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
-//                             [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
-//    
-//    NSError *error = nil;
-//    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-//    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
-//        /*
-//         Replace this implementation with code to handle the error appropriately.
-//         
-//         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//         
-//         Typical reasons for an error here include:
-//         * The persistent store is not accessible;
-//         * The schema for the persistent store is incompatible with current managed object model.
-//         Check the error message to determine what the actual problem was.
-//         
-//         
-//         If the persistent store is not accessible, there is typically something wrong with the file path. Often, a file URL is pointing into the application's resources directory instead of a writeable directory.
-//         
-//         If you encounter schema incompatibility errors during development, you can reduce their frequency by:
-//         * Simply deleting the existing store:
-//         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil]
-//         
-//         * Performing automatic lightweight migration by passing the following dictionary as the options parameter:
-//         @{NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES}
-//         
-//         Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
-//         
-//         */
-//        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-//        abort();
-//    }
-    
     // Creates options for the AWSNSIncrementalStore
     NSDictionary *hashKeys = [NSDictionary dictionaryWithObjectsAndKeys:
                               USERS_KEY, USERS_TABLE,
+                              POST_HASH_KEY, POST_TABLE,
                               nil];
-//    NSDictionary *rangeKeys = [NSDictionary dictionaryWithObjectsAndKeys:
-//                               LOCATIONS_RANGE_KEY, @"Location",
-//                               AWESOME_RANGE_KEY, @"Awesome",
-//                               nil];
+    NSDictionary *rangeKeys = [NSDictionary dictionaryWithObjectsAndKeys:
+                               POST_RANGE_KEY, POST_TABLE,
+                               nil];
     NSDictionary *versions = [NSDictionary dictionaryWithObjectsAndKeys:
                               USERS_VERSIONS,USERS_TABLE,
+                              POST_VERSIONS,POST_TABLE,
                               nil];
     NSDictionary *tableMapper = [NSDictionary dictionaryWithObjectsAndKeys:
                                  USERS_TABLE, USERS_TABLE,
+                                 POST_TABLE, POST_TABLE,
                                  nil];
     
     AmazonWIFCredentialsProvider *provider = [AmazonClientManager provider];
@@ -328,7 +321,7 @@
     NSDictionary *storeOoptions = [NSDictionary dictionaryWithObjectsAndKeys:
                              hashKeys, AWSPersistenceDynamoDBHashKey,
                              versions, AWSPersistenceDynamoDBVersionKey,
-//                             rangeKeys, AWSPersistenceDynamoDBRangeKey,
+                             rangeKeys, AWSPersistenceDynamoDBRangeKey,
                              ddb, AWSPersistenceDynamoDBClient,
                              tableMapper, AWSPersistenceDynamoDBTableMapper, nil];
     

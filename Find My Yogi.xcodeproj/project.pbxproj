@@ -57,16 +57,17 @@
 		4355FC22196B195A0059F0C7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4355FC20196B195A0059F0C7 /* Model.xcdatamodeld */; };
 		4355FC47196B32350059F0C7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC46196B32350059F0C7 /* CoreData.framework */; };
 		4355FC4D196B36C20059F0C7 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355FC4C196B36C20059F0C7 /* libsqlite3.0.dylib */; };
+		4372C2F519756FBA00D1E188 /* YogiOm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4372C2F419756FBA00D1E188 /* YogiOm.m */; };
+		4372C2F819756FBB00D1E188 /* YogiVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4372C2F719756FBB00D1E188 /* YogiVenue.m */; };
+		4372C2FB19756FBB00D1E188 /* YogiPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4372C2FA19756FBB00D1E188 /* YogiPost.m */; };
+		4372C2FE19756FBB00D1E188 /* YogiEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4372C2FD19756FBB00D1E188 /* YogiEvent.m */; };
+		4372C30119756FBB00D1E188 /* YogiFollower.m in Sources */ = {isa = PBXBuildFile; fileRef = 4372C30019756FBB00D1E188 /* YogiFollower.m */; };
+		4372C30419756FBB00D1E188 /* YogiUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4372C30319756FBB00D1E188 /* YogiUser.m */; };
+		4372C30719756FBB00D1E188 /* YogiLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4372C30619756FBB00D1E188 /* YogiLocation.m */; };
 		43A0783E196D1CE200E56B57 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A0783D196D1CE200E56B57 /* FacebookSDK.framework */; };
 		43A07840196D1CF000E56B57 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A0783F196D1CF000E56B57 /* AdSupport.framework */; };
 		43A07843196E4C3000E56B57 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A07842196E4C3000E56B57 /* DataManager.m */; };
 		43A07870196E5A5100E56B57 /* YogiVenues.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A0786F196E5A5100E56B57 /* YogiVenues.m */; };
-		43A07873196E5A5200E56B57 /* YogiUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A07872196E5A5200E56B57 /* YogiUser.m */; };
-		43A07876196E5A5200E56B57 /* YogiFollower.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A07875196E5A5200E56B57 /* YogiFollower.m */; };
-		43A07879196E5A5200E56B57 /* YogiLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A07878196E5A5200E56B57 /* YogiLocation.m */; };
-		43A0787C196E5A5200E56B57 /* YogiEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A0787B196E5A5200E56B57 /* YogiEvent.m */; };
-		43A0787F196E5A5200E56B57 /* YogiOm.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A0787E196E5A5200E56B57 /* YogiOm.m */; };
-		43A07882196E5A5200E56B57 /* YogiPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A07881196E5A5200E56B57 /* YogiPost.m */; };
 		43ADD597196CF7CD00176A49 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ADD593196CF7CD00176A49 /* AWSDynamoDB.framework */; };
 		43ADD598196CF7CD00176A49 /* AWSPersistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ADD594196CF7CD00176A49 /* AWSPersistence.framework */; };
 		43ADD599196CF7CD00176A49 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ADD595196CF7CD00176A49 /* AWSRuntime.framework */; };
@@ -163,24 +164,26 @@
 		4355FC21196B195A0059F0C7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		4355FC46196B32350059F0C7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4355FC4C196B36C20059F0C7 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		4372C2F319756FBA00D1E188 /* YogiOm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiOm.h; sourceTree = "<group>"; };
+		4372C2F419756FBA00D1E188 /* YogiOm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiOm.m; sourceTree = "<group>"; };
+		4372C2F619756FBB00D1E188 /* YogiVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiVenue.h; sourceTree = "<group>"; };
+		4372C2F719756FBB00D1E188 /* YogiVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiVenue.m; sourceTree = "<group>"; };
+		4372C2F919756FBB00D1E188 /* YogiPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiPost.h; sourceTree = "<group>"; };
+		4372C2FA19756FBB00D1E188 /* YogiPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiPost.m; sourceTree = "<group>"; };
+		4372C2FC19756FBB00D1E188 /* YogiEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiEvent.h; sourceTree = "<group>"; };
+		4372C2FD19756FBB00D1E188 /* YogiEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiEvent.m; sourceTree = "<group>"; };
+		4372C2FF19756FBB00D1E188 /* YogiFollower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiFollower.h; sourceTree = "<group>"; };
+		4372C30019756FBB00D1E188 /* YogiFollower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiFollower.m; sourceTree = "<group>"; };
+		4372C30219756FBB00D1E188 /* YogiUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiUser.h; sourceTree = "<group>"; };
+		4372C30319756FBB00D1E188 /* YogiUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiUser.m; sourceTree = "<group>"; };
+		4372C30519756FBB00D1E188 /* YogiLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiLocation.h; sourceTree = "<group>"; };
+		4372C30619756FBB00D1E188 /* YogiLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiLocation.m; sourceTree = "<group>"; };
 		43A0783D196D1CE200E56B57 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		43A0783F196D1CF000E56B57 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		43A07841196E4C3000E56B57 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		43A07842196E4C3000E56B57 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		43A0786E196E5A5100E56B57 /* YogiVenues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiVenues.h; sourceTree = "<group>"; };
 		43A0786F196E5A5100E56B57 /* YogiVenues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiVenues.m; sourceTree = "<group>"; };
-		43A07871196E5A5200E56B57 /* YogiUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiUser.h; sourceTree = "<group>"; };
-		43A07872196E5A5200E56B57 /* YogiUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiUser.m; sourceTree = "<group>"; };
-		43A07874196E5A5200E56B57 /* YogiFollower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiFollower.h; sourceTree = "<group>"; };
-		43A07875196E5A5200E56B57 /* YogiFollower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiFollower.m; sourceTree = "<group>"; };
-		43A07877196E5A5200E56B57 /* YogiLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiLocation.h; sourceTree = "<group>"; };
-		43A07878196E5A5200E56B57 /* YogiLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiLocation.m; sourceTree = "<group>"; };
-		43A0787A196E5A5200E56B57 /* YogiEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiEvent.h; sourceTree = "<group>"; };
-		43A0787B196E5A5200E56B57 /* YogiEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiEvent.m; sourceTree = "<group>"; };
-		43A0787D196E5A5200E56B57 /* YogiOm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiOm.h; sourceTree = "<group>"; };
-		43A0787E196E5A5200E56B57 /* YogiOm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiOm.m; sourceTree = "<group>"; };
-		43A07880196E5A5200E56B57 /* YogiPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogiPost.h; sourceTree = "<group>"; };
-		43A07881196E5A5200E56B57 /* YogiPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogiPost.m; sourceTree = "<group>"; };
 		43ADD593196CF7CD00176A49 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSDynamoDB.framework; sourceTree = "<group>"; };
 		43ADD594196CF7CD00176A49 /* AWSPersistence.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSPersistence.framework; sourceTree = "<group>"; };
 		43ADD595196CF7CD00176A49 /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSRuntime.framework; sourceTree = "<group>"; };
@@ -391,18 +394,20 @@
 				43A07841196E4C3000E56B57 /* DataManager.h */,
 				43A07842196E4C3000E56B57 /* DataManager.m */,
 				4355FC20196B195A0059F0C7 /* Model.xcdatamodeld */,
-				43A07880196E5A5200E56B57 /* YogiPost.h */,
-				43A07881196E5A5200E56B57 /* YogiPost.m */,
-				43A0787D196E5A5200E56B57 /* YogiOm.h */,
-				43A0787E196E5A5200E56B57 /* YogiOm.m */,
-				43A0787A196E5A5200E56B57 /* YogiEvent.h */,
-				43A0787B196E5A5200E56B57 /* YogiEvent.m */,
-				43A07877196E5A5200E56B57 /* YogiLocation.h */,
-				43A07878196E5A5200E56B57 /* YogiLocation.m */,
-				43A07874196E5A5200E56B57 /* YogiFollower.h */,
-				43A07875196E5A5200E56B57 /* YogiFollower.m */,
-				43A07871196E5A5200E56B57 /* YogiUser.h */,
-				43A07872196E5A5200E56B57 /* YogiUser.m */,
+				4372C30519756FBB00D1E188 /* YogiLocation.h */,
+				4372C30619756FBB00D1E188 /* YogiLocation.m */,
+				4372C30219756FBB00D1E188 /* YogiUser.h */,
+				4372C30319756FBB00D1E188 /* YogiUser.m */,
+				4372C2FF19756FBB00D1E188 /* YogiFollower.h */,
+				4372C30019756FBB00D1E188 /* YogiFollower.m */,
+				4372C2FC19756FBB00D1E188 /* YogiEvent.h */,
+				4372C2FD19756FBB00D1E188 /* YogiEvent.m */,
+				4372C2F919756FBB00D1E188 /* YogiPost.h */,
+				4372C2FA19756FBB00D1E188 /* YogiPost.m */,
+				4372C2F619756FBB00D1E188 /* YogiVenue.h */,
+				4372C2F719756FBB00D1E188 /* YogiVenue.m */,
+				4372C2F319756FBA00D1E188 /* YogiOm.h */,
+				4372C2F419756FBA00D1E188 /* YogiOm.m */,
 				43A0786E196E5A5100E56B57 /* YogiVenues.h */,
 				43A0786F196E5A5100E56B57 /* YogiVenues.m */,
 			);
@@ -516,39 +521,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43A0787C196E5A5200E56B57 /* YogiEvent.m in Sources */,
 				4355FBF7196B11130059F0C7 /* AWSPersistenceDynamoDBIncrementalStore.m in Sources */,
 				4355FC1E196B11260059F0C7 /* ResponseHandler.m in Sources */,
 				326EC0B81963356F00087EBD /* AppDelegate.m in Sources */,
 				326EC0E61963645300087EBD /* Tools.m in Sources */,
 				4355FBFA196B11130059F0C7 /* AmazonClientManager.m in Sources */,
 				4355FC1D196B11260059F0C7 /* Response.m in Sources */,
+				4372C30719756FBB00D1E188 /* YogiLocation.m in Sources */,
 				326EC0C11963357000087EBD /* MasterFeedController.m in Sources */,
 				4355FC19196B11260059F0C7 /* JSONUtilities.m in Sources */,
 				4355FBF9196B11130059F0C7 /* AmazonAnonymousKeyChainWrapper.m in Sources */,
 				4355FC18196B11260059F0C7 /* GetTokenResponseHandler.m in Sources */,
 				4355FC16196B11260059F0C7 /* GetTokenRequest.m in Sources */,
-				43A07876196E5A5200E56B57 /* YogiFollower.m in Sources */,
 				4355FC14196B11260059F0C7 /* AmazonTVMClient.m in Sources */,
 				4355FC1C196B11260059F0C7 /* RequestDelegate.m in Sources */,
 				32823349197206EE00717E9B /* PostsCell.m in Sources */,
-				43A07873196E5A5200E56B57 /* YogiUser.m in Sources */,
 				326EC0B41963356F00087EBD /* main.m in Sources */,
+				4372C30419756FBB00D1E188 /* YogiUser.m in Sources */,
 				326EC0C41963357000087EBD /* YogiViewController.m in Sources */,
 				4355FC17196B11260059F0C7 /* GetTokenResponse.m in Sources */,
+				4372C2F819756FBB00D1E188 /* YogiVenue.m in Sources */,
 				326EC0E91963712F00087EBD /* UserFeedCell.m in Sources */,
 				43A07843196E4C3000E56B57 /* DataManager.m in Sources */,
 				4355FC15196B11260059F0C7 /* Crypto.m in Sources */,
+				4372C2F519756FBA00D1E188 /* YogiOm.m in Sources */,
 				326EC0EE19661DD300087EBD /* UserFeedItem.m in Sources */,
-				43A07879196E5A5200E56B57 /* YogiLocation.m in Sources */,
 				4355FC1A196B11260059F0C7 /* RegisterDeviceRequest.m in Sources */,
 				4355FBF8196B11130059F0C7 /* AmazonWIFKeyChainWrapper.m in Sources */,
+				4372C30119756FBB00D1E188 /* YogiFollower.m in Sources */,
+				4372C2FE19756FBB00D1E188 /* YogiEvent.m in Sources */,
+				4372C2FB19756FBB00D1E188 /* YogiPost.m in Sources */,
 				32DF00B71971C66100F116DE /* CalendarTableViewController.m in Sources */,
 				4355FBFC196B11130059F0C7 /* Utilities.m in Sources */,
-				43A07882196E5A5200E56B57 /* YogiPost.m in Sources */,
 				4355FC22196B195A0059F0C7 /* Model.xcdatamodeld in Sources */,
 				4355FBFB196B11130059F0C7 /* Constants.m in Sources */,
-				43A0787F196E5A5200E56B57 /* YogiOm.m in Sources */,
 				43A07870196E5A5100E56B57 /* YogiVenues.m in Sources */,
 				4355FC1B196B11260059F0C7 /* Request.m in Sources */,
 				43ADD5A4196D072C00176A49 /* SigninViewController.m in Sources */,

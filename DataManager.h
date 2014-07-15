@@ -26,6 +26,7 @@
 - (BOOL)updateUserWithToken:(NSString *)deviceToken;
 - (NSString *)getEndpointARNForUserID:(NSString *)userId;
 
+- (NSArray *) getFeedForThisUser;
 - (NSError *)saveContext;
 
 @end

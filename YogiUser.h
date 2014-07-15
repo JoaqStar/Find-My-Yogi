@@ -2,14 +2,14 @@
 //  YogiUser.h
 //  Find My Yogi
 //
-//  Created by Joaquin Brown on 7/9/14.
+//  Created by Joaquin Brown on 7/15/14.
 //  Copyright (c) 2014 Joaquin Brown. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class YogiEvent, YogiPost;
+@class YogiEvent;
 
 @interface YogiUser : NSManagedObject
 
@@ -26,7 +26,6 @@
 @property (nonatomic, retain) NSString * password;
 @property (nonatomic, retain) NSString * userId;
 @property (nonatomic, retain) NSSet *events;
-@property (nonatomic, retain) NSSet *posts;
 @end
 
 @interface YogiUser (CoreDataGeneratedAccessors)
@@ -35,10 +34,5 @@
 - (void)removeEventsObject:(YogiEvent *)value;
 - (void)addEvents:(NSSet *)values;
 - (void)removeEvents:(NSSet *)values;
-
-- (void)addPostsObject:(YogiPost *)value;
-- (void)removePostsObject:(YogiPost *)value;
-- (void)addPosts:(NSSet *)values;
-- (void)removePosts:(NSSet *)values;
 
 @end

@@ -104,7 +104,6 @@ typedef enum {
                                     NSLog(@"Could not login to facebook because: %@", error);
                                 } else {
                                     NSLog(@"Successfuly logged into facebook");
-                                    //[Utilities setupTables];
                                     [self getUserInfo:session];
                                 }
                             }];
