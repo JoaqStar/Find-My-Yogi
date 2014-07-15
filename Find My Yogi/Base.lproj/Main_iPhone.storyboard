@@ -201,8 +201,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Ipc-aQ-ow3">
-                                <rect key="frame" x="147" y="143" width="59" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Ipc-aQ-ow3">
+                                <rect key="frame" x="146" y="140" width="63" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="imI-kK-ich"/>
@@ -212,8 +212,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="ehi-dA-dWW">
-                                <rect key="frame" x="147" y="141" width="59" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="ehi-dA-dWW">
+                                <rect key="frame" x="146" y="139" width="63" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="r5u-hW-Gyd"/>
@@ -223,26 +223,26 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UOr-7i-eis">
-                                <rect key="frame" x="120" y="156" width="27" height="15"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOr-7i-eis">
+                                <rect key="frame" x="120" y="155" width="26" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="iK4-hz-2fr"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uoQ-cZ-06n">
-                                <rect key="frame" x="206" y="163" width="27" height="0.0"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uoQ-cZ-06n">
+                                <rect key="frame" x="209" y="162" width="27" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dCf-Ta-4WP">
-                                <rect key="frame" x="293" y="163" width="27" height="0.0"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dCf-Ta-4WP">
+                                <rect key="frame" x="296" y="162" width="26" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifU-Xb-Iqh">
-                                <rect key="frame" x="233" y="140" width="60" height="44"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifU-Xb-Iqh">
+                                <rect key="frame" x="236" y="139" width="60" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="Poe-5D-81a"/>
@@ -270,8 +270,8 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" verticalCompressionResistancePriority="800" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1i-2m-Z08">
-                                        <rect key="frame" x="56" y="7" width="31" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" verticalCompressionResistancePriority="800" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1i-2m-Z08">
+                                        <rect key="frame" x="58" y="7" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -280,8 +280,8 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" verticalCompressionResistancePriority="800" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5n-PG-a0q">
-                                        <rect key="frame" x="100" y="7" width="31" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" verticalCompressionResistancePriority="800" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5n-PG-a0q">
+                                        <rect key="frame" x="102" y="7" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -290,8 +290,8 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" verticalCompressionResistancePriority="800" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fi1-FV-hRu">
-                                        <rect key="frame" x="144" y="7" width="31" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" verticalCompressionResistancePriority="800" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fi1-FV-hRu">
+                                        <rect key="frame" x="146" y="7" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -310,8 +310,8 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" verticalCompressionResistancePriority="800" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLq-cr-yok">
-                                        <rect key="frame" x="232" y="7" width="31" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" verticalCompressionResistancePriority="800" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLq-cr-yok">
+                                        <rect key="frame" x="234" y="7" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -320,8 +320,8 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" verticalCompressionResistancePriority="800" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lM-85-hTA">
-                                        <rect key="frame" x="276" y="7" width="31" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" verticalCompressionResistancePriority="800" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lM-85-hTA">
+                                        <rect key="frame" x="278" y="7" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -330,16 +330,16 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfV-Uy-Ipg">
-                                        <rect key="frame" x="307" y="10" width="13" height="25"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfV-Uy-Ipg">
+                                        <rect key="frame" x="308" y="10" width="14" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="Gga-Y6-ftR"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VQS-Dy-kW7">
-                                        <rect key="frame" x="263" y="10" width="13" height="25"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQS-Dy-kW7">
+                                        <rect key="frame" x="264" y="10" width="14" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
@@ -354,8 +354,8 @@
                                             <constraint firstAttribute="height" constant="25" id="hks-tn-vFK"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="shl-Zg-DND">
-                                        <rect key="frame" x="175" y="10" width="13" height="25"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shl-Zg-DND">
+                                        <rect key="frame" x="176" y="10" width="14" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
@@ -370,16 +370,16 @@
                                             <constraint firstAttribute="height" constant="25" id="lDE-Qh-w0c"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0MM-4c-hzV">
-                                        <rect key="frame" x="87" y="10" width="13" height="25"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0MM-4c-hzV">
+                                        <rect key="frame" x="88" y="10" width="14" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="sfF-Ei-UmQ"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h8o-nJ-TNc">
-                                        <rect key="frame" x="43" y="10" width="13" height="25"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8o-nJ-TNc">
+                                        <rect key="frame" x="44" y="10" width="14" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
@@ -450,8 +450,8 @@
                                     <constraint firstAttribute="centerY" secondItem="VBi-AM-vM2" secondAttribute="centerY" id="yuf-k8-jCl"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aZa-6o-Doe" userLabel="View-daysOfWeek tappable layer">
-                                <rect key="frame" x="0.0" y="192" width="320" height="44"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZa-6o-Doe" userLabel="View-daysOfWeek tappable layer">
+                                <rect key="frame" x="0.0" y="192" width="322" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -576,7 +576,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="rfG-x7-oD4">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CalendarCell" id="rfG-x7-oD4">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rfG-x7-oD4" id="gG1-Lp-C2C">
