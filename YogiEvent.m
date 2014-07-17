@@ -2,14 +2,11 @@
 //  YogiEvent.m
 //  Find My Yogi
 //
-//  Created by Joaquin Brown on 7/15/14.
+//  Created by Joaquin Brown on 7/16/14.
 //  Copyright (c) 2014 Joaquin Brown. All rights reserved.
 //
 
 #import "YogiEvent.h"
-#import "YogiPost.h"
-#import "YogiUser.h"
-#import "YogiVenue.h"
 
 
 @implementation YogiEvent
@@ -20,8 +17,5 @@
 @dynamic title;
 @dynamic userId;
 @dynamic venueId;
-@dynamic post;
-@dynamic user;
-@dynamic venue;
 
 @end

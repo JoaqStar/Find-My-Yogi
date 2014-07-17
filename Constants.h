@@ -44,6 +44,11 @@
 #define POST_RANGE_KEY               @"postDate"
 #define POST_VERSIONS                @"version"
 
+#define FOLLOW_TABLE                 @"YogiFollower"
+#define FOLLOW_HASH_KEY              @"followerId"
+#define FOLLOW_RANGE_KEY             @"userId"
+#define FOLLOW_VERSIONS              @"version"
+
 #define LOCATIONS_TABLE              @"AwesomeLocations"
 #define LOCATIONS_HASH_KEY           @"locationKey"
 #define LOCATIONS_RANGE_KEY          @"userId"

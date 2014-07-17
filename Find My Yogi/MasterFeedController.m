@@ -18,7 +18,7 @@
 @interface MasterFeedController ()
 
 @property (strong, nonatomic) NSMutableArray *userFeedItems;  // Array of main feed items
-
+@property (strong, nonatomic) DataManager *dataManager;
 @end
 
 @implementation MasterFeedController
@@ -44,7 +44,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    self.dataManager = [DataManager sharedManager];
     
     // Set color of nav bar items
     [self.navigationController.navigationBar setTintColor:[Tools titleTintColor]];
@@ -87,10 +88,11 @@
     item.message = @"I'll be at YogaExpo at booth 119 all day, stop by and say hello!";
     [self.userFeedItems addObject:item];
     
-    NSArray *feedArray = [[DataManager sharedManager] getFeedForThisUser];
+    NSArray *feedArray = [self.dataManager getFeedForThisUser];
     
     for (YogiPost *post in feedArray) {
-        NSLog(@"Post message is %@", post.message);
+        YogiUser *user = [self.dataManager getUser:post.userId];
+        NSLog(@"Post message is %@", user);
     }
 }
 

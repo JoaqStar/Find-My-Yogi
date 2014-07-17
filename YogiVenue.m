@@ -2,12 +2,11 @@
 //  YogiVenue.m
 //  Find My Yogi
 //
-//  Created by Joaquin Brown on 7/15/14.
+//  Created by Joaquin Brown on 7/16/14.
 //  Copyright (c) 2014 Joaquin Brown. All rights reserved.
 //
 
 #import "YogiVenue.h"
-#import "YogiEvent.h"
 
 
 @implementation YogiVenue
@@ -21,6 +20,5 @@
 @dynamic postalCode;
 @dynamic provence;
 @dynamic venueId;
-@dynamic events;
 
 @end

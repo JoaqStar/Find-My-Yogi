@@ -22,11 +22,14 @@
 
 + (id)sharedManager;
 
+- (YogiUser *)getUser:(NSString *)userId;
 - (NSString *)addFacebookUser:(NSDictionary *)fbUser;
 - (BOOL)updateUserWithToken:(NSString *)deviceToken;
 - (NSString *)getEndpointARNForUserID:(NSString *)userId;
 
 - (NSArray *) getFeedForThisUser;
+- (NSArray *) getYogisUserFollows;
+
 - (NSError *)saveContext;
 
 @end
