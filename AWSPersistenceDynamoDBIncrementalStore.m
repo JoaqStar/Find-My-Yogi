@@ -134,7 +134,9 @@ NSString *const AWSPersistenceDynamoDBUserAgentPrefix = @"Persistence Framework"
             {
                 NSComparisonPredicate *predicate = (NSComparisonPredicate *)fetchRequest.predicate;
 
-                if([[[predicate leftExpression] keyPath] isEqualToString:[self hashKeyForEntityName:fetchRequest.entity.name]])
+                NSString *hashKey = [self hashKeyForEntityName:fetchRequest.entity.name];
+                
+                if([[[predicate leftExpression] keyPath] isEqualToString:hashKey])
                 {
                     NSMutableArray *getItemResult = [self getItem:fetchRequest
                                                       withContext:context
@@ -317,8 +319,7 @@ NSString *const AWSPersistenceDynamoDBUserAgentPrefix = @"Persistence Framework"
             key = [NSMutableDictionary dictionaryWithObject:attributeValue forKey:[self hashKeyForEntityName:objectID.entity.name]];
         }
                    
-        DynamoDBGetItemRequest *getItemRequest = [[DynamoDBGetItemRequest alloc] initWithTableName:[self tableNameForEntityName:objectID.entity.name]
-                                                                                            andKey:key];
+        DynamoDBGetItemRequest *getItemRequest = [[DynamoDBGetItemRequest alloc] initWithTableName:[self tableNameForEntityName:objectID.entity.name] andKey:key];
         getItemRequest.consistentRead = YES;
 
         DynamoDBGetItemResponse *getItemResponse = [self.ddb getItem:getItemRequest];
@@ -425,12 +426,29 @@ NSString *const AWSPersistenceDynamoDBUserAgentPrefix = @"Persistence Framework"
     @try
     {
         DynamoDBAttributeValue *attributeValue = [self attributeValueFromObject:[objectIdToHashKey valueForKey:objectID.URIRepresentation.description]];
-        NSMutableDictionary *key = [NSMutableDictionary dictionaryWithObject:attributeValue
-                                                                      forKey:[self hashKeyForEntityName:objectID.entity.name]];
-        DynamoDBGetItemRequest *getItemRequest = [[DynamoDBGetItemRequest alloc] initWithTableName:[self tableNameForEntityName:objectID.entity.name]
-                                                                                            andKey:key];
+        
+        NSMutableDictionary *key;
+        
+        id hashUnknown = [objectIdToHashKey valueForKey:objectID.URIRepresentation.description];
+        if([hashUnknown isKindOfClass:[NSDictionary class]])
+        {
+            // hash + range key
+            NSDictionary *compositeHash = hashUnknown;
+            
+            DynamoDBAttributeValue *attributeValueHashKey = [self attributeValueFromObject:[compositeHash objectForKey:@"hashKey"]];
+            DynamoDBAttributeValue *attributeValueRangeKey = [self attributeValueFromObject:[compositeHash objectForKey:@"rangeKey"]];
+            
+            key = [NSMutableDictionary dictionaryWithObject:attributeValueHashKey forKey:[self hashKeyForEntityName:objectID.entity.name]];
+            [key addEntriesFromDictionary:[NSDictionary dictionaryWithObject:attributeValueRangeKey forKey:[self rangeKeyForEntityName:objectID.entity.name]]];
+            
+        } else
+        {
+            key = [NSMutableDictionary dictionaryWithObject:attributeValue forKey:[self hashKeyForEntityName:objectID.entity.name]];
+        }
+        
+        DynamoDBGetItemRequest *getItemRequest = [[DynamoDBGetItemRequest alloc] initWithTableName:[self tableNameForEntityName:objectID.entity.name] andKey:key];
         getItemRequest.consistentRead = YES;
-
+        
         DynamoDBGetItemResponse *getItemResponse = [self.ddb getItem:getItemRequest];
 
         if(getItemResponse.error == nil)

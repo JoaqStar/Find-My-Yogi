@@ -12,10 +12,12 @@
 #import "AWSPersistenceDynamoDBIncrementalStore.h"
 #import <AWSRuntime/AWSRuntime.h>
 #import "AmazonClientManager.h"
+#import "YogiFollower.h"
 
 @interface DataManager ()
 
 @property (nonatomic, strong) NSString *deviceToken;
+@property (nonatomic, strong) NSArray *yogisUserFollows;
 
 @end
 
@@ -45,7 +47,7 @@
 #pragma mark User Methods
 - (BOOL)updateUserWithToken:(NSString *)deviceToken {
 
-    YogiUser *user = [self getThisUser:nil];
+    YogiUser *user = [self getUser:nil];
     
     self.deviceToken = deviceToken;
     
@@ -78,7 +80,7 @@
 
 - (NSString *)addFacebookUser:(NSDictionary *)fbUser
 {
-    YogiUser *user = [self getThisUser:fbUser[@"id"]];
+    YogiUser *user = [self getUser:fbUser[@"id"]];
     
     if (user == nil) {
         return [self addUser:fbUser];
@@ -99,11 +101,20 @@
     [self.managedObjectContext deleteObject:object];
 }
 
--(YogiUser *)getThisUser:(NSString *)userId {
+-(YogiUser *)getUser:(NSString *)userId {
     
-    // If userId is nil, then see if there is any value stored in thisUserId
+    // If userId is nil, then get this local user
     if (userId == nil && self.thisUserId != nil) {
         userId = self.thisUserId;
+    }
+    
+    if (userId != nil) {
+        // search for user in list of users
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"userId == %@", userId];
+        NSArray *filteredArray = [self.yogisUserFollows filteredArrayUsingPredicate:predicate];
+        if ([filteredArray  count] > 0) {
+            return [filteredArray lastObject];
+        }
     }
     
     @synchronized([self class])
@@ -192,7 +203,11 @@
 {
     @synchronized([self class])
     {
-        NSArray *feedArray;
+        
+        // Get Yogis that this user follows
+        NSArray *yogiArray = [self getYogisUserFollows];
+        
+        NSMutableArray *feedArray = [[NSMutableArray alloc] init];
         
         NSManagedObjectContext *context = [self managedObjectContext];
         
@@ -201,18 +216,67 @@
         NSFetchRequest *request = [[NSFetchRequest alloc] init];
         [request setEntity:entity];
         
-        NSPredicate *predicate = [NSPredicate
-                                  predicateWithFormat:@"%@ = %@", POST_HASH_KEY, self.thisUserId];
-        [request setPredicate:predicate];
         
-        NSError *error;
-        feedArray = [context executeFetchRequest:request error:&error];
-        
-        if (error) {
-            NSLog(@"Error was %@", error);
+        for (YogiUser *yogi in yogiArray) {
+            NSPredicate *predicate = [NSPredicate
+                                      predicateWithFormat:@"%@ = %@", POST_HASH_KEY, yogi.userId];
+            [request setPredicate:predicate];
+            
+            NSError *error;
+            NSArray *array = [context executeFetchRequest:request error:&error];
+            
+            if (error) {
+                NSLog(@"Error was %@", error);
+            } else {
+                [feedArray addObjectsFromArray:array];
+            }
         }
         
         return feedArray;
+    }
+}
+
+- (NSArray *) getYogisUserFollows
+{
+    if (self.yogisUserFollows != nil) {
+        return self.yogisUserFollows;
+    }
+    
+    @synchronized([self class])
+    {
+        NSArray *followArray;
+        
+        NSManagedObjectContext *context = [self managedObjectContext];
+        
+        NSEntityDescription *entity = [NSEntityDescription
+                                       entityForName:FOLLOW_TABLE inManagedObjectContext:context];
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        [request setEntity:entity];
+        
+        NSString *queryString = [NSString stringWithFormat:@"%@ = '%@'", FOLLOW_HASH_KEY, self.thisUserId];
+        NSPredicate *predicate = [NSPredicate
+                                  predicateWithFormat:queryString];
+        [request setPredicate:predicate];
+        
+        NSError *error;
+        followArray = [context executeFetchRequest:request error:&error];
+        
+        if (error) {
+            NSLog(@"Error was %@", error);
+            return nil;
+        }
+        
+        NSMutableArray *userArray = [[NSMutableArray alloc] init];
+        
+        for (YogiFollower *follower in followArray) {
+            
+            YogiUser *user = [self getUser:follower.userId];
+            [userArray addObject:user];
+        }
+        
+        self.yogisUserFollows = userArray;
+        
+        return userArray;
     }
 }
 
@@ -296,17 +360,21 @@
     NSDictionary *hashKeys = [NSDictionary dictionaryWithObjectsAndKeys:
                               USERS_KEY, USERS_TABLE,
                               POST_HASH_KEY, POST_TABLE,
+                              FOLLOW_HASH_KEY, FOLLOW_TABLE,
                               nil];
     NSDictionary *rangeKeys = [NSDictionary dictionaryWithObjectsAndKeys:
                                POST_RANGE_KEY, POST_TABLE,
+                               FOLLOW_RANGE_KEY, FOLLOW_TABLE,
                                nil];
     NSDictionary *versions = [NSDictionary dictionaryWithObjectsAndKeys:
                               USERS_VERSIONS,USERS_TABLE,
                               POST_VERSIONS,POST_TABLE,
+                              FOLLOW_VERSIONS, FOLLOW_TABLE,
                               nil];
     NSDictionary *tableMapper = [NSDictionary dictionaryWithObjectsAndKeys:
                                  USERS_TABLE, USERS_TABLE,
                                  POST_TABLE, POST_TABLE,
+                                 FOLLOW_TABLE, FOLLOW_TABLE,
                                  nil];
     
     AmazonWIFCredentialsProvider *provider = [AmazonClientManager provider];

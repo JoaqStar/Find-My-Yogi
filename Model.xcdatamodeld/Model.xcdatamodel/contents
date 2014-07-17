@@ -7,9 +7,6 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="venueId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogiPost" syncable="YES"/>
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogiUser" inverseName="events" inverseEntity="YogiUser" syncable="YES"/>
-        <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogiVenue" inverseName="events" inverseEntity="YogiVenue" syncable="YES"/>
     </entity>
     <entity name="YogiFollower" representedClassName="YogiFollower" syncable="YES">
         <attribute name="followerId" optional="YES" attributeType="String" syncable="YES"/>
@@ -46,7 +43,6 @@
         <attribute name="loginType" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="YogiEvent" inverseName="user" inverseEntity="YogiEvent" syncable="YES"/>
     </entity>
     <entity name="YogiVenue" representedClassName="YogiVenue" syncable="YES">
         <attribute name="address1" optional="YES" attributeType="String" syncable="YES"/>
@@ -58,15 +54,14 @@
         <attribute name="postalCode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="provence" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="venueId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="YogiEvent" inverseName="venue" inverseEntity="YogiEvent" syncable="YES"/>
     </entity>
     <elements>
-        <element name="YogiEvent" positionX="0" positionY="99" width="128" height="178"/>
+        <element name="YogiEvent" positionX="0" positionY="99" width="128" height="133"/>
         <element name="YogiFollower" positionX="-36" positionY="81" width="128" height="73"/>
         <element name="YogiLocation" positionX="-54" positionY="72" width="128" height="118"/>
         <element name="YogiOm" positionX="36" positionY="171" width="128" height="73"/>
-        <element name="YogiPost" positionX="-18" positionY="90" width="128" height="120"/>
-        <element name="YogiUser" positionX="-63" positionY="-18" width="128" height="240"/>
-        <element name="YogiVenue" positionX="18" positionY="126" width="128" height="193"/>
+        <element name="YogiPost" positionX="-18" positionY="90" width="128" height="118"/>
+        <element name="YogiUser" positionX="-63" positionY="-18" width="128" height="223"/>
+        <element name="YogiVenue" positionX="18" positionY="126" width="128" height="180"/>
     </elements>
 </model>
