@@ -12,12 +12,16 @@
 #import "DataManager.h"
 #import "YogiUser.h"
 #import "YogiPost.h"
+#import "YogiEvent.h"
 #import "UserFeedCell.h"
 #import "UserFeedItem.h"
 
 @interface MasterFeedController ()
 
 @property (strong, nonatomic) NSMutableArray *userFeedItems;  // Array of main feed items
+@property (strong, nonatomic) NSArray *postsArray; // Array of feed posts from backend DB table
+@property (strong, nonatomic) NSMutableArray *userArray;  // Array of user data from backend DB table
+@property (strong, nonatomic) NSMutableArray *eventArray; // Array of event data from backend DB table
 @property (strong, nonatomic) DataManager *dataManager;
 @end
 
@@ -88,11 +92,18 @@
     item.message = @"I'll be at YogaExpo at booth 119 all day, stop by and say hello!";
     [self.userFeedItems addObject:item];
     
-    NSArray *feedArray = [self.dataManager getFeedForThisUser];
-    
-    for (YogiPost *post in feedArray) {
+    // Load initial feed data
+    self.postsArray = [self.dataManager getFeedForThisUser];
+    for (YogiPost *post in self.postsArray) {
         YogiUser *user = [self.dataManager getUser:post.userId];
-        NSLog(@"Post message is %@", user);
+        [self.userArray addObject:user];
+        // Load in event info if it exists.  Add onto this code once getEvent: is written.
+        YogiEvent *event = nil;
+        NSLog(@"User is %@ %@", user.firstName, user.lastName);
+        NSLog(@"Post message is %@", post.message);
+        if (event) {
+            NSLog(@"Event title is %@", event.title);
+        }
     }
 }
 
@@ -114,6 +125,16 @@
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
+- (NSMutableArray *)userArray
+{
+    if (!_userArray) {
+        _userArray = [[NSMutableArray alloc] initWithCapacity:10];
+    }
+    
+    return _userArray;
+}
+
+
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -123,15 +144,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.userFeedItems count];
+    return [self.postsArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UserFeedCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserFeedCell" forIndexPath:indexPath];
 
-    UserFeedItem *item = self.userFeedItems[indexPath.row];
-    [cell loadCellFromUserFeedItem:item];
+    YogiPost *post = self.postsArray[indexPath.row];
+    YogiUser *user = self.userArray[indexPath.row];
+    [cell loadCellFromYogiPost:post andYogiUser:user andYogiEvent:nil];
 
     return cell;
 }

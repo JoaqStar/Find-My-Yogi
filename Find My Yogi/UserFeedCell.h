@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UserFeedItem.h"
+#import "YogiPost.h"
+#import "YogiUser.h"
+#import "YogiEvent.h"
 
 @interface UserFeedCell : UITableViewCell
 
@@ -17,6 +19,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *eventInfoLabel;
 @property (weak, nonatomic) IBOutlet UIButton *omButton;
 
--(void)loadCellFromUserFeedItem:(UserFeedItem *)feedItem;
+-(void)loadCellFromYogiPost:(YogiPost *)post andYogiUser:(YogiUser *)user andYogiEvent:(YogiEvent *)event;
 
 @end

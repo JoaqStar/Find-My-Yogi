@@ -33,22 +33,32 @@
 }
 
 // Populate cell contents from passed-in data
-- (void)loadCellFromUserFeedItem:(UserFeedItem *)feedItem
+- (void)loadCellFromYogiPost:(YogiPost *)post andYogiUser:(YogiUser *)user andYogiEvent:(YogiEvent *)event
 {
-    self.yogiNameLabel.text = feedItem.name;
-    self.messageLabel.text = feedItem.message;
-    self.eventInfoLabel.text = feedItem.eventDescription;
-    [self.yogiImage setImage:feedItem.yogiPhoto];
+    self.yogiNameLabel.text = user.firstName;
+    if (user.lastName) {
+       self.yogiNameLabel.text = [self.yogiNameLabel.text stringByAppendingFormat:@" %@", user.lastName];
+    }
+    self.messageLabel.text = post.message;
+    
+    if (event) {
+        self.eventInfoLabel.text = event.title; // What goes here?
+    } else {
+        self.eventInfoLabel.text = nil;
+    }
+
+    // Load photo from Facebook
+    //[self.yogiImage setImage:feedItem.yogiPhoto];
     
     // Determine Om image
-    feedItem.liked = NO; // This line for testing
+    BOOL isLiked = NO; // This line for testing
     if (self.omButton.imageView.image == nil) {
         UIImage *originalImage = [UIImage imageNamed:@"thumbs_up.png"];
         [self.omButton setImage:[originalImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
         self.omButton.adjustsImageWhenHighlighted = NO;  // Don't darken button image when pressed
     }
     
-    if (feedItem.isLiked) {
+    if (isLiked) {
         self.omButton.tintColor = [Tools likeTintColor];
         self.omButton.selected = YES;
     } else {
