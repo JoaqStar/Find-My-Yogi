@@ -54,6 +54,10 @@
 // Update the user interface for the detail item.
 - (void)configureView
 {
+    // Nav bar title
+    self.navigationItem.title = [[self.yogiUser.firstName stringByAppendingString:@" "]
+                                 stringByAppendingString:self.yogiUser.lastName];
+    
     // User photo
     UIImage *photo = [[DataManager sharedManager] photoForUserId:self.yogiUser.userId];
     [self.profilePhotoImage setImage:photo];

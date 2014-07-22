@@ -539,7 +539,7 @@
                             <constraint firstItem="zB2-Cs-7z3" firstAttribute="centerY" secondItem="aZa-6o-Doe" secondAttribute="centerY" id="x89-MK-kwG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Yogi Joaquin" id="cra-N8-TIN">
+                    <navigationItem key="navigationItem" title="Yogi" id="cra-N8-TIN">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="OqG-UO-fql"/>
                     </navigationItem>
                     <connections>
