@@ -20,6 +20,9 @@
 @property (strong, nonatomic) NSString *thisUserId;
 @property (strong, nonatomic) NSString *thisUserName;
 
+// Notification for when a user photo has been loaded into the cache.
+extern NSString *const UserPhotoDidLoadNotification;
+
 + (id)sharedManager;
 
 - (YogiUser *)getUser:(NSString *)userId;
@@ -29,6 +32,7 @@
 
 - (NSArray *) getFeedForThisUser;
 - (NSArray *) getYogisUserFollows;
+- (UIImage *)photoForUserId:(NSString *)userId notificationName:(NSString **)notificationName;
 
 - (NSError *)saveContext;
 

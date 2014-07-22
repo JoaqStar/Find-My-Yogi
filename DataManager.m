@@ -18,10 +18,22 @@
 
 @property (nonatomic, strong) NSString *deviceToken;
 @property (nonatomic, strong) NSArray *yogisUserFollows;
+@property (nonatomic, strong) NSMutableDictionary *userPhotos; // Key=user ID, Value=photo
 
 @end
 
 @implementation DataManager
+
+NSString *const UserPhotoDidLoadNotification = @"UserPhotoDidLoadNotification";
+
+- (NSMutableDictionary *)userPhotos
+{
+    if (!_userPhotos) {
+        _userPhotos = [[NSMutableDictionary alloc] initWithCapacity:10];
+    }
+    
+    return _userPhotos;
+}
 
 #pragma mark Singleton Methods
 + (id)sharedManager {
@@ -59,6 +71,7 @@
     
     return YES;
 }
+
 - (NSString *)addUser:(NSDictionary *)fbUser
 {
     NSManagedObjectContext *context = [self managedObjectContext];
@@ -278,6 +291,37 @@
         
         return userArray;
     }
+}
+
+// Returns the facebook user photo associated with a user ID.  If photo isn't cached then it returns nil and the name of a notification
+// and spins off a thread to retrieve it from Facebook.  A NSNotification will be sent along with the image when it has been retrieved.
+- (UIImage *)photoForUserId:(NSString *)userId notificationName:(NSString **)notificationName
+{
+    if (userId) {
+        // Return photo if it is already cached.
+        NSData *photoData = self.userPhotos[userId];
+        if (photoData) {
+            return [UIImage imageWithData:photoData];
+        }
+        
+        // Otherwise, load photo
+        
+        NSString *userImageURL = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=normal", userId];
+        NSURLSession *session = [NSURLSession sharedSession];
+        [[session dataTaskWithURL:[NSURL URLWithString:userImageURL]
+                                              completionHandler:^(NSData *data,
+                                                                  NSURLResponse *response,
+                                                                  NSError *error) {
+                                                  dispatch_async(dispatch_get_main_queue(), ^{
+                                                      NSDictionary *photoDict = @{@"photo" : data};
+                                                      [[NSNotificationCenter defaultCenter] postNotificationName:userImageURL object:self userInfo:photoDict];
+                                                      self.userPhotos[userId] = data;
+                                                  });
+                                              }] resume];
+                                  
+        *notificationName = userImageURL;  // Notification name for caller to listen to.
+    }
+    return nil;
 }
 
 #pragma mark - Error handling

@@ -19,6 +19,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *eventInfoLabel;
 @property (weak, nonatomic) IBOutlet UIButton *omButton;
 
--(void)loadCellFromYogiPost:(YogiPost *)post andYogiUser:(YogiUser *)user andYogiEvent:(YogiEvent *)event;
+-(void)loadCellFromYogiPost:(YogiPost *)post yogiUser:(YogiUser *)user yogiEvent:(YogiEvent *)event;
 
 @end

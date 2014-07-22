@@ -67,42 +67,17 @@
     // Register UserFeedCell class for UITableView -- Not needed when using storyboard?
 /*!    [self.tableView registerClass:[UserFeedCell class] forCellReuseIdentifier:@"UserFeedCell"]; */
     
-    // Create test data
-    UserFeedItem *item = [[UserFeedItem alloc] init];
-    item.postID = 1;
-    item.userID = 1;
-    item.yogiPhoto = [UIImage imageNamed:@"Joaquin.jpg"];
-    item.name = @"Joaquin Brown";
-    item.message = @"Just mastered a new pose, I'll be teaching it in my advanced class on Thursday!";
-    [self.userFeedItems addObject:item];
-    
-    item = [[UserFeedItem alloc] init];
-    item.postID = 2;
-    item.userID = 1;
-    item.yogiPhoto = [UIImage imageNamed:@"Joaquin.jpg"];
-    item.name = @"Joaquin Brown";
-    item.message = @"Feeling pumped about tomorrow's Pilates class!";
-    [self.userFeedItems addObject:item];
-    
-    item = [[UserFeedItem alloc] init];
-    item.postID = 3;
-    item.userID = 1;
-    item.yogiPhoto = [UIImage imageNamed:@"Jeff_FB.jpg"];
-    item.name = @"Jeff Berman";
-    item.message = @"I'll be at YogaExpo at booth 119 all day, stop by and say hello!";
-    [self.userFeedItems addObject:item];
-    
-    // Load initial feed data
+    // Load initial feed data into array properties.  Currently a property for each backend DB table.
     self.postsArray = [self.dataManager getFeedForThisUser];
     for (YogiPost *post in self.postsArray) {
         YogiUser *user = [self.dataManager getUser:post.userId];
         [self.userArray addObject:user];
         // Load in event info if it exists.  Add onto this code once getEvent: is written.
         YogiEvent *event = nil;
-        NSLog(@"User is %@ %@", user.firstName, user.lastName);
-        NSLog(@"Post message is %@", post.message);
+        NSLog(@"User: %@ %@", user.firstName, user.lastName);
+        NSLog(@"Post message: %@", post.message);
         if (event) {
-            NSLog(@"Event title is %@", event.title);
+            NSLog(@"Event title: %@", event.title);
         }
     }
 }
@@ -153,7 +128,7 @@
 
     YogiPost *post = self.postsArray[indexPath.row];
     YogiUser *user = self.userArray[indexPath.row];
-    [cell loadCellFromYogiPost:post andYogiUser:user andYogiEvent:nil];
+    [cell loadCellFromYogiPost:post yogiUser:user yogiEvent:nil];
 
     return cell;
 }
