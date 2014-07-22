@@ -32,7 +32,7 @@ extern NSString *const UserPhotoDidLoadNotification;
 
 - (NSArray *) getFeedForThisUser;
 - (NSArray *) getYogisUserFollows;
-- (UIImage *)photoForUserId:(NSString *)userId notificationName:(NSString **)notificationName;
+- (UIImage *)photoForUserId:(NSString *)userId;
 
 - (NSError *)saveContext;
 

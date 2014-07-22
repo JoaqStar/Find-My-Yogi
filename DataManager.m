@@ -293,9 +293,10 @@ NSString *const UserPhotoDidLoadNotification = @"UserPhotoDidLoadNotification";
     }
 }
 
-// Returns the facebook user photo associated with a user ID.  If photo isn't cached then it returns nil and the name of a notification
-// and spins off a thread to retrieve it from Facebook.  A NSNotification will be sent along with the image when it has been retrieved.
-- (UIImage *)photoForUserId:(NSString *)userId notificationName:(NSString **)notificationName
+// Returns the facebook user photo associated with a user ID.  If photo isn't cached then it returns nil and spins off
+// a thread to retrieve it from Facebook.  A UserPhotoDidLoadNotification will be sent along with the image when it has been retrieved,
+// with the userId as the notification sender.
+- (UIImage *)photoForUserId:(NSString *)userId
 {
     if (userId) {
         // Return photo if it is already cached.
@@ -306,7 +307,7 @@ NSString *const UserPhotoDidLoadNotification = @"UserPhotoDidLoadNotification";
         
         // Otherwise, load photo
         
-        NSString *userImageURL = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=normal", userId];
+        NSString *userImageURL = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large", userId];
         NSURLSession *session = [NSURLSession sharedSession];
         [[session dataTaskWithURL:[NSURL URLWithString:userImageURL]
                                               completionHandler:^(NSData *data,
@@ -314,12 +315,12 @@ NSString *const UserPhotoDidLoadNotification = @"UserPhotoDidLoadNotification";
                                                                   NSError *error) {
                                                   dispatch_async(dispatch_get_main_queue(), ^{
                                                       NSDictionary *photoDict = @{@"photo" : data};
-                                                      [[NSNotificationCenter defaultCenter] postNotificationName:userImageURL object:self userInfo:photoDict];
                                                       self.userPhotos[userId] = data;
+                                                      [[NSNotificationCenter defaultCenter] postNotificationName:UserPhotoDidLoadNotification
+                                                                                                          object:userId
+                                                                                                        userInfo:photoDict];
                                                   });
                                               }] resume];
-                                  
-        *notificationName = userImageURL;  // Notification name for caller to listen to.
     }
     return nil;
 }

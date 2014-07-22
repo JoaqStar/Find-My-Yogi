@@ -72,8 +72,13 @@
     for (YogiPost *post in self.postsArray) {
         YogiUser *user = [self.dataManager getUser:post.userId];
         [self.userArray addObject:user];
+        
+        // Quick & dirty cheat to pre-cache user photos so they're already loaded by the time they're needed.
+        [[DataManager sharedManager] photoForUserId:user.userId];
+        
         // Load in event info if it exists.  Add onto this code once getEvent: is written.
         YogiEvent *event = nil;
+        
         NSLog(@"User: %@ %@", user.firstName, user.lastName);
         NSLog(@"Post message: %@", post.message);
         if (event) {
@@ -82,10 +87,12 @@
     }
 }
 
+
 - (void)search:(id)sender
 {
     
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -93,12 +100,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [self.userFeedItems insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        YogiUser *user = self.userArray[indexPath.row];
+        [[segue destinationViewController] setYogiUser:user];
+    }
 }
+
 
 - (NSMutableArray *)userArray
 {
@@ -117,10 +128,12 @@
     return 1;
 }
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.postsArray count];
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -133,12 +146,34 @@
     return cell;
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        UserFeedItem *object = self.userFeedItems[indexPath.row];
+        self.yogiViewController.detailItem = object;
+    }
+}
+
+
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return NO;
 }
 
+
+/*
+- (void)insertNewObject:(id)sender
+{
+    [self.userFeedItems insertObject:[NSDate date] atIndex:0];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+*/
+
+
+/*
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -148,6 +183,7 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
 }
+*/
 
 /*
 // Override to support rearranging the table view.
@@ -164,23 +200,4 @@
     return YES;
 }
 */
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        UserFeedItem *object = self.userFeedItems[indexPath.row];
-        self.yogiViewController.detailItem = object;
-    }
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        UserFeedItem *object = self.userFeedItems[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
-        
-    }
-}
-
 @end

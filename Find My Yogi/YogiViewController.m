@@ -1,5 +1,5 @@
 //
-//  DetailViewController.m
+//  YogiViewController.m
 //  Find My Yogi
 //
 //  Created by Jeff Berman on 7/1/14.
@@ -7,6 +7,7 @@
 //
 
 #import "YogiViewController.h"
+#import "DataManager.h"
 
 @interface YogiViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -25,6 +26,15 @@
 
 @implementation YogiViewController
 
+- (YogiUser *)yogiUser
+{
+    if (!_yogiUser) {
+        _yogiUser = [[YogiUser alloc] init];
+    }
+    
+    return _yogiUser;
+}
+
 #pragma mark - Managing the detail item
 
 - (void)setDetailItem:(id)newDetailItem
@@ -41,10 +51,15 @@
     }        
 }
 
+// Update the user interface for the detail item.
 - (void)configureView
 {
-    // Update the user interface for the detail item.
-    [self.profilePhotoImage setImage:self.detailItem.yogiPhoto];
+    // User photo
+    UIImage *photo = [[DataManager sharedManager] photoForUserId:self.yogiUser.userId];
+    [self.profilePhotoImage setImage:photo];
+    
+    // Short bio
+    self.shortBioLabel.text = self.yogiUser.bio;
     
     // Set up instagram button
     [self.instagramButton setImage:[UIImage imageNamed:@"Instagram Logo.png"] forState:UIControlStateNormal];
@@ -52,8 +67,7 @@
   //  self.instagramButton.adjustsImageWhenHighlighted = NO;  // Don't darken button image when pressed
     
     // Choose correct Follow button
-    self.yogi = YES;  /*! For testing */
-    if (self.isYogi == YES) {
+    if ([self.yogiUser.isYogi boolValue] == YES) {
         self.followersButton.hidden = NO;
         self.followButton.hidden = YES;
     } else {

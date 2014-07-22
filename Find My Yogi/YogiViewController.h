@@ -1,5 +1,5 @@
 //
-//  DetailViewController.h
+//  YogiViewController.h
 //  Find My Yogi
 //
 //  Created by Jeff Berman on 7/1/14.
@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "UserFeedItem.h"
 #import "PostsCell.h"
+#import "YogiUser.h"
 
 @interface YogiViewController : UIViewController <UISplitViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) UserFeedItem *detailItem;
+@property (strong, nonatomic) YogiUser *yogiUser;
 
 @property (getter = isYogi) BOOL yogi; // Temp? -- am I a yogi
 

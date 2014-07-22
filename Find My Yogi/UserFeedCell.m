@@ -32,7 +32,13 @@
     [super prepareForReuse];
     
     // Remove userPhotoLoaded notification
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:self.notificationName object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UserPhotoDidLoadNotification object:nil];
+}
+
+- (void)dealloc
+{
+    // Remove userPhotoLoaded notification
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UserPhotoDidLoadNotification object:nil];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -85,12 +91,15 @@
 //                              
 //                          }];
 
-    NSString *notificationName;
-    UIImage *photo = [[DataManager sharedManager] photoForUserId:user.userId notificationName:&notificationName];
+    UIImage *photo = [[DataManager sharedManager] photoForUserId:user.userId];
     if (photo) {
         [self.yogiImage setImage:photo];
     } else {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userPhotoLoaded:) name:notificationName object:[DataManager sharedManager]];
+        // Register for notification for this particular image.  Notification's payload will contain image.
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(userPhotoLoaded:)
+                                                     name:UserPhotoDidLoadNotification
+                                                   object:user.userId];
     }
     
     // Determine Om image
@@ -111,6 +120,7 @@
     }
 }
 
+// Invoked by UserPhotoDidLoadNotification notification.  Places the user photo that has been retrieved into the cell.
 - (void)userPhotoLoaded:(NSNotification *)notification
 {
     NSData *photoData = [notification userInfo][@"photo"];
