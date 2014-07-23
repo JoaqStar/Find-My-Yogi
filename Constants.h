@@ -49,6 +49,11 @@
 #define FOLLOW_RANGE_KEY             @"userId"
 #define FOLLOW_VERSIONS              @"version"
 
+#define EVENT_TABLE                 @"YogiEvent"
+#define EVENT_HASH_KEY              @"userId"
+#define EVENT_RANGE_KEY             @"eventDate"
+#define EVENT_VERSIONS              @"version"
+
 #define LOCATIONS_TABLE              @"AwesomeLocations"
 #define LOCATIONS_HASH_KEY           @"locationKey"
 #define LOCATIONS_RANGE_KEY          @"userId"

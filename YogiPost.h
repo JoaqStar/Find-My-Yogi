@@ -2,7 +2,7 @@
 //  YogiPost.h
 //  Find My Yogi
 //
-//  Created by Joaquin Brown on 7/16/14.
+//  Created by Joaquin Brown on 7/23/14.
 //  Copyright (c) 2014 Joaquin Brown. All rights reserved.
 //
 
@@ -12,7 +12,7 @@
 
 @interface YogiPost : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * eventId;
+@property (nonatomic, retain) NSDate * eventDate;
 @property (nonatomic, retain) NSString * message;
 @property (nonatomic, retain) NSDate * postDate;
 @property (nonatomic, retain) NSNumber * postId;

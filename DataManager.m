@@ -218,7 +218,7 @@ NSString *const UserPhotoDidLoadNotification = @"UserPhotoDidLoadNotification";
     {
         
         // Get Yogis that this user follows
-        NSArray *yogiArray = [self getYogisUserFollows];
+        NSArray *yogiArray = [self getYogisThisUserFollows];
         
         NSMutableArray *feedArray = [[NSMutableArray alloc] init];
         
@@ -249,7 +249,7 @@ NSString *const UserPhotoDidLoadNotification = @"UserPhotoDidLoadNotification";
     }
 }
 
-- (NSArray *) getYogisUserFollows
+- (NSArray *) getYogisThisUserFollows
 {
     if (self.yogisUserFollows != nil) {
         return self.yogisUserFollows;
@@ -291,6 +291,120 @@ NSString *const UserPhotoDidLoadNotification = @"UserPhotoDidLoadNotification";
         
         return userArray;
     }
+}
+
+#warning returns fake data
+- (NSInteger)getFollowerCount:(NSString *)userId
+{
+
+    return 2;
+}
+
+#warning returns fake data
+- (NSArray *)getFollowers:(NSString *)userId
+{
+    return self.yogisUserFollows;
+}
+
+#warning Incmplete method implementation
+- (YogiEvent *)getEventForUser:(NSString *)userId withDate:(NSDate *)eventDate
+{
+    @synchronized([self class])
+    {
+        YogiEvent *event;
+        
+        NSManagedObjectContext *context = [self managedObjectContext];
+        
+        NSEntityDescription *entity = [NSEntityDescription
+                                       entityForName:EVENT_TABLE inManagedObjectContext:context];
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        [request setEntity:entity];
+        
+        NSString *queryString = [NSString stringWithFormat:@"%@ = '%@' and %@ = %f", EVENT_HASH_KEY, userId, EVENT_RANGE_KEY, [eventDate timeIntervalSince1970]];
+        NSPredicate *predicate = [NSPredicate
+                                  predicateWithFormat:queryString];
+        [request setPredicate:predicate];
+        
+        NSError *error;
+        NSArray *eventArray = [context executeFetchRequest:request error:&error];
+        
+        if (error) {
+            NSLog(@"Error was %@", error);
+            return nil;
+        } else {
+            if ([eventArray count] > 0) {
+                event = [eventArray objectAtIndex:0];
+            }
+        }
+        
+        return event;
+    }
+}
+
+#warning Incmplete method implementation
+- (NSArray *)getNearbyYogis:(CLLocation *)location
+{
+    return nil;
+}
+
+#warning Incmplete method implementation
+- (NSArray *)getVenue:(NSString *)venueId
+{
+    return nil;
+}
+
+#warning Incmplete method implementation
+- (NSArray *)getAllVenuesForSearchString:(NSString *)searchString
+{
+    return nil;
+}
+
+#warning Incmplete method implementation
+- (NSInteger)getOmCountForPostId:(NSString *)postId
+{
+    return 0;
+}
+
+#warning Incmplete method implementation
+- (NSArray *)getUsersWhoOmedPostId:(NSString *)postId
+{
+    return nil;
+}
+
+#warning Incmplete method implementation
+- (YogiEvent *)addEvent:(NSString *)title onDate:(NSDate *)eventDate atVenue:(NSString *)venueId
+{
+    return nil;
+}
+
+#warning Incmplete method implementation
+- (YogiPost *)addPost:(NSString *)message eventDate:(NSDate *)eventDate
+{
+    return nil;
+}
+
+#warning Incmplete method implementation
+- (BOOL)followYogi:(NSString *)userId
+{
+    return NO;
+}
+
+#warning Incmplete method implementation
+- (BOOL)omPost:(NSString *)postId
+{
+    return NO;
+}
+
+#warning Incmplete method implementation
+- (YogiVenue *)addVenue:(NSString *)venueName atAddress1:(NSString *)address1 atAddress2:(NSString *)address2 inCity:(NSString *)city inProvence:(NSString *)provence inCountry:(NSString *)country withPostalCode:(NSString *)postCode withPhoneNumber:(NSString *)phoneNumber
+{
+    return nil;
+}
+
+#warning Incmplete method implementation
+- (BOOL)checkinToLocation:(CLLocation *)location
+{
+    return NO;
 }
 
 // Returns the facebook user photo associated with a user ID.  If photo isn't cached then it returns nil and spins off
@@ -406,20 +520,24 @@ NSString *const UserPhotoDidLoadNotification = @"UserPhotoDidLoadNotification";
                               USERS_KEY, USERS_TABLE,
                               POST_HASH_KEY, POST_TABLE,
                               FOLLOW_HASH_KEY, FOLLOW_TABLE,
+                              EVENT_HASH_KEY, EVENT_TABLE,
                               nil];
     NSDictionary *rangeKeys = [NSDictionary dictionaryWithObjectsAndKeys:
                                POST_RANGE_KEY, POST_TABLE,
                                FOLLOW_RANGE_KEY, FOLLOW_TABLE,
+                               EVENT_RANGE_KEY, EVENT_TABLE,
                                nil];
     NSDictionary *versions = [NSDictionary dictionaryWithObjectsAndKeys:
                               USERS_VERSIONS,USERS_TABLE,
                               POST_VERSIONS,POST_TABLE,
                               FOLLOW_VERSIONS, FOLLOW_TABLE,
+                              EVENT_VERSIONS, EVENT_TABLE,
                               nil];
     NSDictionary *tableMapper = [NSDictionary dictionaryWithObjectsAndKeys:
                                  USERS_TABLE, USERS_TABLE,
                                  POST_TABLE, POST_TABLE,
                                  FOLLOW_TABLE, FOLLOW_TABLE,
+                                 EVENT_TABLE, EVENT_TABLE,
                                  nil];
     
     AmazonWIFCredentialsProvider *provider = [AmazonClientManager provider];

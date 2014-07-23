@@ -76,12 +76,12 @@
         // Quick & dirty cheat to pre-cache user photos so they're already loaded by the time they're needed.
         [[DataManager sharedManager] photoForUserId:user.userId];
         
-        // Load in event info if it exists.  Add onto this code once getEvent: is written.
-        YogiEvent *event = nil;
-        
         NSLog(@"User: %@ %@", user.firstName, user.lastName);
+        NSLog(@"bio: %@", user.bio);
         NSLog(@"Post message: %@", post.message);
-        if (event) {
+        if (post.eventDate) {
+            // Load in event info if it exists.  Add onto this code once getEvent: is written.
+            YogiEvent *event = [self.dataManager getEventForUser:post.userId withDate:post.eventDate];
             NSLog(@"Event title: %@", event.title);
         }
     }

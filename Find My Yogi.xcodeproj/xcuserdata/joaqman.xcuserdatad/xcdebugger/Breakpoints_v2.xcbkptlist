@@ -154,12 +154,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataManager.m"
-            timestampString = "427301103.835533"
+            timestampString = "427817657.125024"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
-            landmarkName = "-getFeedForThisUser"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
+            landmarkName = "-getEventForUser:withDate:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
