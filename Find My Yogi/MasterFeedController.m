@@ -23,6 +23,11 @@
 @property (strong, nonatomic) NSMutableArray *userArray;  // Array of user data from backend DB table
 @property (strong, nonatomic) NSMutableArray *eventArray; // Array of event data from backend DB table
 @property (strong, nonatomic) DataManager *dataManager;
+@property (strong, nonatomic) UISearchBar *searchBar;
+@property (strong, nonatomic) UIView *barWrapper;
+
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *profileButton;
+
 @end
 
 @implementation MasterFeedController
@@ -53,15 +58,7 @@
     
     // Set color of nav bar items
     [self.navigationController.navigationBar setTintColor:[Tools titleTintColor]];
-    
-    // Template code to add edit button
-//    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(search:)];
-    self.navigationItem.leftBarButtonItem = searchButton;
 
-    // This was template code to add a "+" button in nav bar
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-//    self.navigationItem.rightBarButtonItem = addButton;
     self.yogiViewController = (YogiViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
     // Register UserFeedCell class for UITableView -- Not needed when using storyboard?
@@ -87,12 +84,28 @@
     }
 }
 
-
-- (void)search:(id)sender
-{
+- (IBAction)search:(id)sender {
     
+    if (self.searchBar == nil) {
+        self.searchBar = [UISearchBar new];
+        self.searchBar.delegate = self;
+        [self.searchBar setPlaceholder:@"current location"];
+        [self.searchBar setOpaque:NO];
+        self.searchBar.showsCancelButton = YES;
+        [self.searchBar sizeToFit];
+        self.barWrapper = [[UIView alloc]initWithFrame:self.searchBar.bounds];
+        [self.barWrapper addSubview:self.searchBar];
+        [self.navigationController.navigationBar addSubview:self.barWrapper];
+    } else {
+        [self.barWrapper setHidden:NO];
+    }
 }
 
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [self.searchBar resignFirstResponder];
+    [self.barWrapper setHidden:YES];
+}
 
 - (void)didReceiveMemoryWarning
 {

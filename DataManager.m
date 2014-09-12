@@ -296,7 +296,6 @@ NSString *const UserPhotoDidLoadNotification = @"UserPhotoDidLoadNotification";
 #warning returns fake data
 - (NSInteger)getFollowerCount:(NSString *)userId
 {
-
     return 2;
 }
 

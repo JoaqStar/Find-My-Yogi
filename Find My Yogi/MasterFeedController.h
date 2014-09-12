@@ -11,7 +11,7 @@
 
 @class YogiViewController;
 
-@interface MasterFeedController : UITableViewController
+@interface MasterFeedController : UITableViewController <UISearchBarDelegate>
 
 @property (strong, nonatomic) YogiViewController *yogiViewController;
 
